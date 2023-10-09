@@ -1,0 +1,1105 @@
+.orderBtn {
+  background-color: #fbb403 !important;
+  color: #1d1d1d;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  padding: 13px 22px 13px 22px;
+  border-radius: 25px;
+  border: none;
+  transition-duration: 0.5s;
+}
+.orderBtn:hover {
+  background-color: #1d1d1d !important;
+  color: white !important;
+}
+
+.brand {
+  color: #1d1d1d !important;
+  text-transform: capitalize !important;
+  font-family: "Heebo", sans-serif !important;
+  font-weight: bold !important;
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+.page {
+  color: #1d1d1d;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Heebo", sans-serif !important;
+  transition-duration: 0.5s;
+}
+.page:hover {
+  color: #fbb403 !important;
+}
+
+.carousel {
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/slider/bg-color.jpg);
+}
+
+.lead {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.chicken {
+  font-size: 70px;
+  font-family: "Heebo", sans-serif;
+  color: #ffffff;
+  font-weight: 550;
+}
+
+.arrow {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+}
+
+.burger {
+  font-size: 60px;
+  font-family: "Heebo", sans-serif;
+  color: #1d1d1d;
+  font-weight: 550;
+}
+
+.welcome {
+  font-size: 25px;
+  font-family: "Pangolin", cursive;
+  color: #c24907;
+}
+
+.ipsum {
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.explore {
+  padding: 7px 25px 7px 25px;
+  font-size: 20px;
+  transition-duration: 0.5s;
+  font-weight: 450;
+}
+.explore:hover {
+  background-color: #1d1d1d !important;
+  color: white !important;
+}
+
+.section3 {
+  height: 750px;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/others-bg.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fffefe;
+}
+
+.cards {
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 400px;
+  background-color: white;
+  border: rgba(0, 0, 0, 0.09) 1px solid;
+  margin-bottom: 5px;
+  transition-duration: 0.5s;
+}
+.box p {
+  color: #737373;
+}
+.box:hover {
+  background-color: #fbb403;
+  color: white !important;
+}
+.box:hover p {
+  color: white;
+}
+
+.commonBox {
+  justify-content: space-between;
+}
+
+.boxes {
+  transition-duration: 1s;
+}
+.boxes i {
+  color: #ffffff;
+}
+.boxes:hover {
+  transform: translateY(-20px);
+}
+.boxes:hover i {
+  color: #fbb403;
+}
+
+.quality {
+  font-size: 25px;
+  color: #fbb403;
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.delOne {
+  font-size: 50px;
+  color: #1d1d1d;
+  text-transform: capitalize;
+  font-family: "Heebo", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ce7b04;
+}
+
+.grey {
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  color: #1d1d1d;
+  text-transform: capitalize;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.colBox {
+  border: 1px dashed #fbb403;
+  border-radius: 5px;
+}
+
+.cardImg {
+  border: none !important;
+}
+
+.burgerCard {
+  border: none !important;
+  transition-duration: 1s;
+}
+.burgerCard:hover {
+  background-color: #f3e6c4;
+}
+.burgerCard:hover .imgCard {
+  transition-duration: 1s;
+  background-color: #fbb403 !important;
+}
+
+.imgCard {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #fef0cd;
+  height: 240px;
+  border-radius: 0px 0px 120px 120px;
+}
+.imgCard .cardImg {
+  width: 200px;
+  height: 150px;
+}
+
+.order {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 7px 25px 7px 25px;
+  font-size: 16px;
+  transition-duration: 0.5s;
+  font-weight: 450;
+}
+.order:hover {
+  background-color: #dc3545;
+  color: white !important;
+}
+
+.orders {
+  height: 500px;
+  margin-top: 100px !important;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/video/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.orders .backCircle {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #fbb403;
+  border-radius: 50%;
+}
+.orders .video {
+  width: 99px;
+  height: 99px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes circleAnimate {
+  0% {
+    padding: 0px;
+  }
+  100% {
+    padding: 30px;
+  }
+}
+.pricess {
+  height: 300px;
+  background-color: #fbb403;
+}
+.pricess .cups h1 {
+  margin-bottom: 5px;
+  margin-bottom: 5px;
+  line-height: 1;
+  font-size: 50px;
+  color: #1d1d1d;
+  text-transform: capitalize;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+}
+.pricess .cups p {
+  color: #434447;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 550;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.section6 .card {
+  border: 2px solid #d2d2d2;
+  height: 170px;
+  border-radius: 0;
+  margin-right: 10px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition-duration: 0.5s;
+}
+.section6 .card:hover {
+  color: #c24a07;
+  border-color: #c24a07;
+}
+.section6 .card:hover i {
+  color: #c24a07;
+  transition-duration: 0.5s;
+}
+.section6 .card i {
+  font-size: 70px;
+  margin-top: 20px;
+  color: #1d1d1d;
+}
+.section6 .card h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.leftMenu {
+  border: 2px dashed #d2d2d2;
+  margin-right: 20px;
+  padding: 20px 0px 0px 20px;
+}
+.leftMenu h3 {
+  color: #1d1d1d;
+  text-transform: capitalize;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  transition-duration: 0.3s;
+  margin-bottom: 15px;
+}
+.leftMenu h3:hover {
+  color: #c24a07;
+}
+.leftMenu h3 span {
+  color: #c24a07;
+}
+.leftMenu p {
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+}
+
+.menuList {
+  margin-bottom: 20px;
+}
+
+.section9 {
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/global.png);
+  background-color: #fef1d2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 70px !important;
+}
+.section9 .lead {
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 450;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+.section9 .coinBtn {
+  background-color: #1d1d1d !important;
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  padding: 13px 22px 13px 22px;
+  border-radius: 25px;
+  border: none;
+  transition-duration: 0.5s;
+}
+.section9 .coinBtn:hover {
+  background-color: #fbb403 !important;
+  color: white;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: orange;
+}
+
+.swiper-pagination-bullet {
+  padding: 5px;
+}
+
+.swiper-pagination {
+  transform: translateY(10px);
+}
+
+.section11 .card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 400px;
+  display: flex;
+  justify-content: flex-end Im !important;
+}
+.section11 .card .card-body {
+  transition-duration: 1s;
+}
+.section11 .card .card-body:hover {
+  transform: translateY(-10px);
+}
+.section11 .card .card-text {
+  display: inline-block;
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 500;
+  padding: 5px 15px;
+  background-color: #fbb403;
+  border-radius: 5px;
+}
+.section11 .card .card-title {
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: "Pangolin", cursive;
+}
+.section11 .card .btn {
+  font-size: 16px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  color: #1d1d1d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  transition-duration: 0.5s;
+}
+.section11 .card .btn:hover {
+  background-color: #fbb403;
+  color: #ffffff;
+}
+.section11 .card .burgPrice {
+  text-align: end !important;
+  width: 130px;
+  height: 130px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.section11 .card .burgPrice p {
+  font-size: 15px;
+  color: #836c34;
+  font-weight: 500;
+  background-color: none;
+}
+.section11 .card .burgPrice h3 {
+  color: #1d1d1d;
+  text-transform: capitalize;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+}
+.section11 .card1 {
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/overview/image1.jpg);
+  background-size: cover;
+}
+.section11 .card2 {
+  background-size: cover;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/overview/image2.jpg);
+}
+.section11 .card3 {
+  background-size: cover;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/overview/image3.jpg);
+}
+.section11 .card4 {
+  background-size: cover;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/overview/image4.jpg);
+}
+.section11 .card5 {
+  background-size: cover;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/overview/image5.jpg);
+}
+
+.footer {
+  background-color: #1d1d1d;
+}
+.footer .nav-item {
+  font-size: 18px;
+}
+.footer li {
+  margin-top: 8px;
+}
+.footer .location {
+  border-radius: 10px;
+}
+.footer .book {
+  background-color: #fbb403;
+  width: 1300px;
+  border-radius: 10px;
+}
+.footer .book .img-fluid {
+  border-radius: 5px;
+}
+.footer .book .btn {
+  font-size: 16px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  color: #1d1d1d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  transition-duration: 0.5s;
+}
+.footer .book .btn:hover {
+  background-color: #1d1d1d;
+  color: #ffffff;
+}
+.footer .book .lead {
+  color: #4b4b4b;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.end {
+  background-color: #313131;
+}
+.end span {
+  color: #fbb403;
+}
+.end p {
+  font-size: 20;
+  font-weight: bold;
+}
+
+.section8 .card {
+  border: none;
+}
+.section8 .card:hover .front {
+  opacity: 1;
+  transform: translateY(-120px);
+}
+.section8 .card:hover .front .btn:hover {
+  background-color: white;
+  border-color: #fbb403;
+  color: #fbb403 !important;
+}
+.section8 .front {
+  opacity: 0;
+  background-color: white;
+  width: 200px;
+  margin-left: 35px;
+  padding: 10px 0px 10px 0px;
+  border-radius: 5px;
+}
+
+.hero1 {
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/page-title/bg.jpg);
+  background-size: cover;
+}
+.hero1 .topHero {
+  height: 450px;
+}
+
+.whoAre {
+  font-size: 25px;
+  color: #fbb403;
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.hero2 .title1 {
+  color: #1d1d1d;
+  font-size: 50px;
+}
+.hero2 .lead1 {
+  margin-bottom: 18px !important;
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px;
+}
+
+.red {
+  background-color: #eb0028;
+  height: 250px !important;
+}
+.red * {
+  color: white !important;
+}
+
+.hero3 .swiper-pagination-bullet {
+  padding: 10px !important;
+  transform: translateY(3px);
+  border: 2px solid #e60027 !important;
+}
+.hero3 .swiper-pagination-bullet-active {
+  background-color: #e60027 !important;
+}
+.hero3 .cardImg1 {
+  border: none !important;
+}
+.hero3 .burgerCard1 {
+  border: none !important;
+  background-color: #f7f7f7;
+  transition-duration: 0.5s;
+}
+.hero3 .burgerCard1:hover {
+  background-color: white;
+  box-shadow: -11px 6px 10px -5px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: -11px 6px 10px -5px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: -11px 6px 10px -5px rgba(0, 0, 0, 0.24);
+}
+.hero3 .imgCard1 {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 240px;
+  border-radius: 0px 0px 120px 120px;
+}
+.hero3 .imgCard1 .cardImg1 {
+  width: 300px;
+  height: 210px;
+}
+.hero3 .order {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 7px 25px 7px 25px;
+  font-size: 16px;
+  font-weight: 450;
+}
+.hero3 .order .logos i {
+  margin-right: 5px;
+}
+.hero3 .colBox1 {
+  border: none !important;
+  transition-duration: 0.5s;
+}
+.hero3 .colBox1:hover {
+  transform: translateY(-2px) !important;
+}
+
+.about4 {
+  height: 700px;
+  background-image: url(https://templates.envytheme.com/handout/default/assets/img/history-bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.about5 span {
+  font-size: 18px;
+  color: #616161;
+  font-family: "Poppins", sans-serif;
+}
+.about5 p {
+  margin-top: 15px;
+  font-size: 27px;
+  color: #1d1d1d;
+  font-family: "Poppins", sans-serif;
+}
+.about5 .swiper-pagination-bullet {
+  padding: 10px !important;
+  transform: translateY(3px);
+  border: 2px solid #e60027 !important;
+}
+.about5 .swiper-pagination-bullet-active {
+  background-color: #e60027 !important;
+}
+
+.social {
+  justify-content: space-between;
+}
+.social i {
+  font-size: 17px;
+  color: white;
+}
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+.social a:hover {
+  background-color: #ffc107;
+}
+.social .facebook {
+  background-color: #3b5998;
+}
+.social .twitter {
+  background-color: #55acee;
+}
+.social .instagram {
+  background-color: #3f729b;
+}
+.social .pinterest {
+  background-color: #ff0000;
+}
+.social .youtube {
+  background-color: #c80000;
+}
+
+.addBtn {
+  transition-duration: 0.5s;
+}
+.addBtn:hover {
+  background-color: #1d1d1d;
+  border-color: #1d1d1d;
+}
+
+.shop1 .lead {
+  font-weight: bold;
+}
+.shop1 .lead span {
+  color: #78797d;
+  text-decoration-line: line-through;
+}
+.shop1 .lorem {
+  margin-bottom: 16px;
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 18px;
+}
+.shop1 .buyBtn {
+  background-color: #f2f2f2;
+  transition-duration: 0.5s;
+  width: 700px;
+  padding: 10px 0px 10px 0px;
+  font-size: 17px;
+}
+.shop1 .buyBtn:hover {
+  background-color: #fbb403;
+  color: white !important;
+}
+
+.dropdown1 {
+  border: none !important;
+  border-radius: 0% !important;
+  padding: 5px;
+}
+.dropdown1 .dropdown-item {
+  font-size: 18px;
+  font-weight: 400;
+  transition-duration: 0.5s;
+}
+.dropdown1 .dropdown-item:hover {
+  color: #ce7b04;
+  transform: translateX(3px);
+}
+
+.paymentMethods a {
+  margin-right: 10px;
+}
+.paymentMethods i {
+  font-size: 25px;
+  color: #3b5998;
+}
+
+.additional .btn {
+  color: #1d1d1d;
+  border: 1px dashed #eeeeee;
+  margin-right: 8px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 0;
+  transition-duration: 0.5s;
+}
+.additional .btn:hover {
+  color: #ffffff;
+  background-color: #fbb403;
+  border-color: #fbb403;
+}
+
+.description {
+  border: 1px dashed #eeeeee;
+  padding: 30px;
+}
+.description ul {
+  list-style: none;
+}
+.description li {
+  border: 1px solid #eeeeee;
+  border-bottom: none;
+  padding: 10px 15px 7px;
+  color: #666666;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+}
+.description li span {
+  display: inline-block;
+  width: 40%;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+.shopList .card {
+  margin: 0px 20px 20px 0px;
+  border: none;
+  border-radius: 0%;
+}
+.shopList .card i {
+  color: #ffb708;
+}
+.shopList .card img {
+  border-radius: 0%;
+}
+.shopList .card .card-body {
+  margin-top: 0% !important;
+  padding-top: 0% !important;
+}
+.shopList .lorem {
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+.shopList .lead {
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+}
+.shopList .lead span {
+  text-decoration: line-through;
+  color: #828893;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.shopList select {
+  padding: 10px 40px 10px 10px;
+  width: 300px;
+  padding: 15px 5px 15px 15px;
+  border: none !important;
+  color: #666666;
+  font-size: 17px;
+  font-family: inherit;
+}
+.shopList select option {
+  font-size: 17px;
+  color: #666666;
+  border: none !important;
+  font-family: inherit;
+  transition-duration: 0.5s;
+}
+.shopList select option:hover {
+  color: white !important;
+  background-color: #ffc107 !important;
+}
+.shopList .card {
+  transition-duration: 1s;
+}
+.shopList .card:hover {
+  transition-duration: 1s;
+}
+.shopList .card:hover .add-to-cart {
+  transition-duration: 1s;
+  opacity: 1;
+}
+.shopList .card:hover .card-body {
+  transition-duration: 1s;
+  background-color: #ffc107 !important;
+}
+.shopList .card:hover .card-body * {
+  color: white !important;
+}
+
+.buttons .btn {
+  width: 45px;
+  height: 45px;
+  margin: 0 3px;
+  display: inline-block;
+  background-color: #ffffff;
+  line-height: 48px;
+  color: #1d1d1d;
+  box-shadow: 0 2px 10px 0 #d8dde6;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 0% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons .btn:hover {
+  background-color: #fbb403;
+  color: white;
+}
+
+.woocommerce-result-count {
+  line-height: 1.8;
+  color: #737373;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.add-to-cart {
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  color: white !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  transition-duration: 0.5s;
+  padding: 15px 0px;
+  border: none !important;
+}
+.add-to-cart i {
+  color: white !important;
+}
+.add-to-cart:hover {
+  background-color: white !important;
+  color: #ffc107 !important;
+}
+.add-to-cart:hover i {
+  transition-duration: 0.5s;
+  color: #ffc107 !important;
+}
+
+.countBtn {
+  background-color: #f8f8f8;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.countBtn * {
+  font-size: 18px;
+  font-weight: 500;
+}
+.countBtn span {
+  color: #ffc107;
+}
+.countBtn .btn {
+  padding: 10px 20px;
+  transition-duration: 0.5s;
+  color: #d0d0d0 !important;
+}
+.countBtn .btn:hover {
+  color: #ffc107;
+}
+
+.name {
+  color: #666666 !important;
+  font-weight: 500 !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.applyBtn {
+  transition-duration: 0.5s;
+}
+.applyBtn:hover {
+  background-color: #dc3545 !important;
+}
+
+.updateBtn {
+  transition-duration: 0.5s;
+}
+.updateBtn:hover {
+  background-color: #1d1d1d !important;
+  border-color: #1d1d1d !important;
+  color: white;
+}
+
+.cartTotals {
+  background-color: white;
+  padding: 50px 40px;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+}
+
+.totalCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coupon {
+  width: 400px !important;
+}
+
+.payment-box {
+  background-color: white;
+  padding: 30px 20px 30px 20px;
+}
+
+.contact2 {
+  background-color: white;
+  padding: 30px 20px 30px 20px;
+}
+
+.box1 {
+  background-color: white;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  padding: 20px;
+}
+
+.contact1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-content .image .video-btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #1d1d1d;
+  position: absolute;
+  z-index: 1;
+  left: 45px;
+  right: 0;
+  margin: auto;
+  bottom: -100px;
+  transform: translateY(-135%);
+  text-align: center;
+}
+
+.dates ul {
+  list-style: none;
+}
+.dates span {
+  color: #e60027;
+  float: right;
+}
+.dates .lines {
+  width: 40px;
+  border: 1px dashed #737373;
+  float: right;
+  margin-top: 10px;
+}
+
+.contact2 input {
+  background-color: #f3f3f3;
+  border: none;
+  height: 60px;
+  border: 1px solid #f3f3f3;
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.contact2 textarea {
+  background-color: #f3f3f3;
+  border: none;
+  border: 1px solid #f3f3f3;
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.modeBtn {
+  border: none !important;
+  background-color: #fbb403;
+  border-radius: 20px;
+  width: 70px;
+  height: 35px;
+}
+.modeBtn img {
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.light .navbar {
+  background-color: #f8f9fa !important;
+}
+.light .navbar * {
+  color: #1d1d1d;
+}
+
+.dark .navbar {
+  background-color: #000000 !important;
+}
+.dark .navbar * {
+  color: white !important;
+}
+
+.langBtn {
+  border: none !important;
+  background-color: #1d1d1d;
+  border-radius: 20px;
+  width: 70px;
+  height: 35px;
+  color: white !important;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
