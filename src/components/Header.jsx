@@ -2,10 +2,14 @@ import React, { useContext } from 'react'
 import { Container, Nav, Navbar ,Button} from 'react-bootstrap'
 import { ModeContext } from '../context/modeContext'
 import { LangContext } from '../context/langContext'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Link } from 'react-router-dom'
+import { useCart } from 'react-use-cart'
 
 const Header = () => {
   const [mode, setMode] = useContext(ModeContext);
   const [lang, setLang] = useContext(LangContext);
+  const {totalItems} = useCart();
   return (
     <Navbar expand="lg" className="bg-body-light navbar">
       <Container>
@@ -13,31 +17,35 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/" className='page'>{lang==='en' ? 'Home' : 'Ana Səhifə'}</Nav.Link>
-            <Nav.Link href="/about" className='page'>{lang==='en' ? 'About' : 'Haqqımızda'}</Nav.Link>
+            <LinkContainer to= '/'><Nav.Link  className='page'>{lang==='en' ? 'Home' : 'Ana Səhifə'}</Nav.Link></LinkContainer>
+            <LinkContainer to='/about'><Nav.Link  className='page'>{lang==='en' ? 'About' : 'Haqqımızda'}</Nav.Link></LinkContainer>
+            
             <li className="nav-item dropdown page">
-        <a className="nav-link dropdown-toggle page" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <a className="nav-link dropdown-toggle page" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {lang==='en' ? 'Shop' : 'Mağaza'}
         </a>
+       
         <ul className="dropdown-menu dropdown1">
-          <li><a className="dropdown-item" href="/product">{lang==='en' ? 'Shop List' : 'Mağaza Siyahısı'}</a></li>
-          <li><a className="dropdown-item" href="/cart">{lang==='en' ? 'Cart' : 'Səbət'}</a></li>
-          <li><a className="dropdown-item" href="/checkout">{lang==='en' ? 'Checkout' : 'Ödəniş'}</a></li>
-          <li><a className="dropdown-item" href='/'>{lang==='en' ? 'Product Details' : 'Məhsul Təfərrüatları'}</a></li>
+          <LinkContainer to="/product"><li><a  href='/product' className="dropdown-item" >{lang==='en' ? 'Shop List' : 'Mağaza Siyahısı'}</a></li></LinkContainer>
+          
+          <li><LinkContainer to="cart"><Link className="dropdown-item" >{lang==='en' ? 'Cart' : 'Səbət'}</Link></LinkContainer></li>
+            <li><LinkContainer to='checkout'><Link className="dropdown-item" >{lang==='en' ? 'Checkout' : 'Ödəniş'}</Link></LinkContainer></li>
         </ul>
       </li>
-            <Nav.Link href="/" className='page'>{lang==='en' ? 'Blog' : 'Bloq'}</Nav.Link>
-            <Nav.Link href="/contact" className='page'>{lang==='en' ? 'Contact' : 'Əlaqə'}</Nav.Link>
+          <LinkContainer to="/blog"><Nav.Link  className='page'>{lang==='en' ? 'Blog' : 'Bloq'}</Nav.Link></LinkContainer>  
+            <LinkContainer to="/contact" ><Nav.Link className='page'>{lang==='en' ? 'Contact' : 'Əlaqə'}</Nav.Link></LinkContainer>
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link href="/cart" > <button type="button" className="btn btn-light position-relative">
+            <LinkContainer to='/wishlist'><Nav.Link><i className="fa-regular fa-heart fs-5 mt-3"></i></Nav.Link></LinkContainer>
+            <LinkContainer to="/cart"><Nav.Link  > <button type="button" className="btn btn-light position-relative mt-2">
             <i className="fa-solid fa-cart-shopping"></i>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-          0
+        {totalItems}
           <span className="visually-hidden">unread messages</span>
         </span>
-      </button></Nav.Link>
-            <Nav.Link href="/product"><Button className='orderBtn ms-2'>{lang==='en' ? 'ORDER ONLİNE' : 'ONLİNE SİFARİŞ'}</Button></Nav.Link>
+      </button></Nav.Link></LinkContainer>
+            
+           <LinkContainer to="/product"><Nav.Link ><Button className='orderBtn ms-2'>{lang==='en' ? 'ORDER ONLİNE' : 'ONLİNE SİFARİŞ'}</Button></Nav.Link></LinkContainer> 
             <button className='modeBtn mt-3 ms-2' onClick={()=>{
           mode==='light' ? setMode('dark') : setMode('light')
           mode === 'light' ? localStorage.setItem('mode','dark') :  localStorage.setItem('mode','light')

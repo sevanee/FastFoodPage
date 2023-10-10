@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { ProductContext } from '../context/productContext';
 import { useParams } from 'react-router-dom'
-// import { useCart } from 'react-use-cart';
+import { useCart } from 'react-use-cart';
 const ProductDetails = () => {
   const {url} = useParams();
-  // const { addItem } = useCart();
+  const { addItem } = useCart();
   const [product] = useContext(ProductContext);
   const detailsData=  product.find(p=>p.id.toString() === url);
   return (
@@ -17,7 +17,7 @@ const ProductDetails = () => {
             <p className="lead text-dark mt-3">{detailsData.price} <span>$30.00</span></p>
             <p className='lorem'>{detailsData.description}</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button  className='btn btn-warning rounded-5 text-light mt-2 fw-bold px-4 py-2 addBtn'>ADD TO CART</button>
+              <button  className='btn btn-warning rounded-5 text-light mt-2 fw-bold px-4 py-2 addBtn' onClick={()=>addItem(detailsData)}>ADD TO CART</button>
             </div>
             <div className="agree mt-3 d-flex align-items-center">
               <input className='me-2 checkbox' type="checkbox" name="check" id="" />

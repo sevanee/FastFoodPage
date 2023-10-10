@@ -7,8 +7,8 @@ export const ProductProvider=(props)=>{
     const [product,setProduct] = useState([]);
     
     useEffect(()=>{
-        axios.get("https://mocki.io/v1/9f6fff20-f258-400b-9612-0fcf0ccbd68f")
-        .then(res => setProduct(res.data.products))   
+        axios.get("https://mocki.io/v1/98b0598c-78d9-49f7-9e90-3019e92ff33a")
+        .then(res => setProduct(res.data))   
     },[])
     
     return <ProductContext.Provider value={[product,setProduct]}>

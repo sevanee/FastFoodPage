@@ -7990,6 +7990,11 @@ react-use-cart@^1.13.0:
   resolved "https://registry.yarnpkg.com/react-use-cart/-/react-use-cart-1.13.0.tgz#af7f4306612bdb9c7563e59fbee299ee2f8fe278"
   integrity sha512-V3jrNOgBXxTn/RWh1HCEdrQk/jx2xCixdkX1c7Vyl4zxEf9jOuniUnjZSTALO7rQ5226onqmvXxKz1eu0Yz6Iw==
 
+react-use-wishlist@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-use-wishlist/-/react-use-wishlist-1.0.1.tgz#f4d9d495ef33e368cbf76e34a0d729d573b032aa"
+  integrity sha512-i6m89LxSUJMaMdJHKiXl1J40WWqc3zmOqISllKgkPLDcQUQBkdfqCK2m+RVF+XtNwKCD6thP9I1uyC+Bz8QeLA==
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
@@ -9573,6 +9578,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+wishlist@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/wishlist/-/wishlist-0.3.4.tgz#58ed026b87ecac79f3c630207b1d97c1f9bc1182"
+  integrity sha512-zAergaiCSW+16bYVxsImxHkf+Kcsdx2FmvToS6Nu1uOZ/APwFvsk2o5p4TIqg9hTqNgR7XAIM6UfSO7ScCmEHg==
 
 workbox-background-sync@6.6.1:
   version "6.6.1"

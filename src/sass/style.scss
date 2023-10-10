@@ -1125,5 +1125,31 @@ body{
     font-weight: bold;
 }
 
+.blogSection{
+    .authorName{
+        color: #c24907;
+        font-weight: 600;
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+    }
+    i{
+        color: #c24907;
+        font-size: 15px;  
+    }
+    .day{
+        color: #616161;
+    font-size: 15px;
+    font-weight: 500;
+    }
+    .comment{
+        border-bottom: 1px solid #c24907;
+    }
+}
 
+.singleCard{
+    .wishButton{
+        background-color: none !important;
+
+    }
+}
 

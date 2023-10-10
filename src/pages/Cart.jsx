@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/Footer';
 import { LinkContainer } from 'react-router-bootstrap';
-// import { useCart } from 'react-use-cart'
+import { useCart } from 'react-use-cart'
 
 const Cart = () => {
-  // const { removeItem, items } = useCart();
+  const { items , updateItemQuantity , cartTotal , removeItem} = useCart();
+  const [coupon,setCoupon]=useState(['']);
+  const [appliedCoupon, setAppliedCoupon] = useState(null);
+  const appplyCouponCode = (e) => {
+    setCoupon(e.target.value);
+  };
+  const applyCoupon = () => {
+   const validCode='Burger30';
+   if(coupon===validCode){
+    const discount=30;
+    const discountedTotal=cartTotal-discount;
+    setAppliedCoupon(discountedTotal);
+   }else{
+    alert('Invalid coupon code. Please try again.')
+   }
+  };
   return (
     <>
       <div className="container mt-5">
@@ -21,32 +36,42 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {/* {items.map(item => (
+            {items.map(item => (
               <tr>
                 <th scope="row"><img width={90} src={item.image} alt="" /></th>
                 <td className='name'>{item.name}</td>
-                <td>{item.price}</td>
+                <td>${item.price}</td>
                 <td>
+                 
                   <div className="countBtn">
-                    <button className='btn decreaseBtn'>-</button>
-                    <span className='mx-2'>1</span>
-                    <button className='btn increaseBtn'>+</button>
+                    <button className='btn decreaseBtn' onClick={()=>{
+                      if(item.quantity>1)
+                      updateItemQuantity(item.id , item.quantity - 1)
+                    }}>-</button>
+                    <span className='mx-2'>{item.quantity}</span>
+                    <button className='btn increaseBtn' onClick={()=>{
+                      updateItemQuantity(item.id , item.quantity + 1)
+                    }}>+</button>
                   </div>
                 </td>
-                <td>$455.00</td>
-                <td><i  className="fa-regular fa-trash-can text-warning" ></i></td>
+                <td>${item.itemTotal}</td>
+                <td><i  className="fa-regular fa-trash-can text-warning" onClick={()=> removeItem(item.id) }></i></td>
+                   
               </tr>
-            ))} */}
+            ))}
 
           </tbody>
         </table>
         <div >
           <div className="col-lg-12 d-flex align-items-center my-4 ms-5 justify-content-center">
             <div className="col-lg-6 col-md-7 col-sm-6">
+              <form onSubmit={applyCoupon}>
               <div >
-                <input placeholder='Coupon code' type="text" className='coupon px-5 py-3 mt-2 border border-warning' />
-                <button className='btn btn-warning text-light fw-bold rounded-0 py-3 px-3 mb-1 applyBtn'>APPLY COUPON</button>
+                <input placeholder='Coupon code' type="text" className='coupon px-5 py-3 mt-2 border border-warning' value={coupon} onChange={appplyCouponCode}/>
+                <button className='btn btn-warning text-light fw-bold rounded-0 py-3 px-3 mb-1 applyBtn' >APPLY COUPON</button>
               </div>
+              </form>
+              
             </div>
           </div>
         </div>
@@ -57,16 +82,16 @@ const Cart = () => {
             <table className='table border '>
               <tbody>
                 <tr>
-                  <th >Subtotal</th>
-                  <td className='name'>$1683.50</td>
+                  <th >Total</th>
+                  <td className='name'>${cartTotal}</td>
                 </tr>
                 <tr>
                   <th>Shipping</th>
                   <td className='name'>$30.00</td>
                 </tr>
                 <tr>
-                  <th>Total</th>
-                  <td className='name'>$1713.50</td>
+                  <th>Discounted Total</th>
+                  <td className='name'>${appliedCoupon}</td>
                 </tr>
               </tbody>
             </table>

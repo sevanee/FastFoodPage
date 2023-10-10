@@ -9,13 +9,13 @@ import CountUp from 'react-countup';
 import Footer from '../components/Footer';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-import { ProductContext } from '../context/productContext';
+// import { ProductContext } from '../context/productContext';
 import { LangContext } from '../context/langContext'
 // import MenuList from '../components/MenuList';
 const Home = () => {
-  const [homedatas] = useContext(ProductContext);
+  // const [homedatas] = useContext(ProductContext);
   const [iframe, setIframe] = useState();
- const  [lang, setLang] = useContext(LangContext);
+ const  [lang] = useContext(LangContext);
   return (
     <div className='homePage'>
     {/* Section 1 */}

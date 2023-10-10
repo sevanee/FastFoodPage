@@ -1102,4 +1102,28 @@ body {
   height: 35px;
   color: white !important;
   font-weight: bold;
+}
+
+.blogSection .authorName {
+  color: #c24907;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+.blogSection i {
+  color: #c24907;
+  font-size: 15px;
+}
+.blogSection .day {
+  color: #616161;
+  font-size: 15px;
+  font-weight: 500;
+}
+.blogSection .comment {
+  border-bottom: 1px solid #c24907;
+}
+
+.wishButton {
+  background-color: none !important;
+  color: #c80000 !important;
 }/*# sourceMappingURL=style.css.map */
