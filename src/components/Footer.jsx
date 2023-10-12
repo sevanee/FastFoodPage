@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <div>
         <div className="footer pt-5 mt-5">
-   <div className="container col-xxl-8 px-4 py-5 book ">
+        <div className="container col-xxl-8 py-5 book ">
         <div className="row flex-lg-row-reverse align-items-center g-5">
           <div className="col-10 col-sm-8 col-lg-6">
-            <img src="https://templates.envytheme.com/handout/default/assets/img/book-table.jpg" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width={700} height={500} loading="lazy" />
+            <img src="https://templates.envytheme.com/handout/default/assets/img/book-table.jpg" className="d-block mx-lg-auto img-fluid " alt="Bootstrap Themes" width={700} height={500} loading="lazy" />
           </div>
           <div className="col-lg-6">
             <h3 className="fw-bold text-body-emphasis lh-1 mb-3">Book A Table Now!</h3>

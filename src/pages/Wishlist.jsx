@@ -5,7 +5,7 @@ import { useWishlist } from 'react-use-wishlist';
 const Wishlist = () => {
   const { items,removeWishlistItem}=useWishlist();
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 wishlist">
          <table className="table cartTable">
          <thead>
             <tr>
@@ -16,15 +16,21 @@ const Wishlist = () => {
             </tr>
           </thead>
           <tbody>
-            {items.map(item => (
-              <tr>
+            {
+              items.map((item,c)=>{
+                if(c%2==0){
+                  return(
+                    <tr>
                 <th scope="row"><img width={90} src={item.image} alt="" /></th>
                 <td className='name'>{item.name}</td>
                 <td>${item.price}</td>
                 <td><i  className="fa-regular fa-trash-can text-danger" onClick={() => removeWishlistItem(item.id)}></i></td>
-                   
-              </tr>
-            ))}
+                
+                </tr>
+                  )
+                }
+              })
+            }
 
           </tbody>
          </table>

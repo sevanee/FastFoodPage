@@ -11,7 +11,7 @@ const Header = () => {
   const [lang, setLang] = useContext(LangContext);
   const {totalItems} = useCart();
   return (
-    <Navbar expand="lg" className="bg-body-light navbar">
+    <Navbar expand="lg" className="bg-body-light navbar mb-5">
       <Container>
         <Navbar.Brand className='brand' href="/">Handout</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

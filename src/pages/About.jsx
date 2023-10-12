@@ -25,17 +25,17 @@ const About = () => {
         </div>
       </div>
       <div className="below">
-        <img width={1519} src="https://templates.envytheme.com/handout/default/assets/img/page-title/down-shape.png" alt="" />
+        <img src="https://templates.envytheme.com/handout/default/assets/img/page-title/down-shape.png" alt="" />
       </div>
 </div>
 
 {/* Section 2 */}
 
 
-<div className=" hero2 col-xxl-11  py-5 ms-5 mb-5">
+<div className=" hero2 col-xxl-11  py-5 mb-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6">
-            <img  src="https://templates.envytheme.com/handout/default/assets/img/about/image1.jpg" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width={700} height={500} loading="lazy" />
+            <img  src="https://templates.envytheme.com/handout/default/assets/img/about/image1.jpg" className="d-block mx-lg-auto img-fluid brg-image" alt="Bootstrap Themes" width={700} height={500} loading="lazy" />
           </div>
           <div className="col-lg-6">
           <h1 className='mt-5 whoAre ms-5'>Who Are We</h1>

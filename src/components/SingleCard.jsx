@@ -6,7 +6,7 @@ import { useWishlist } from 'react-use-wishlist';
 
 const SingleCard = ({ alldata }) => {
   const { addItem } = useCart();
-  const { addWishlistItem } = useWishlist();
+  const { addWishlistItem ,getWishlistItem,removeWishlistItem} = useWishlist();
   return (
     <div className=' col-sm-12 col-md-3 singleCard'>
         <div className=" card" style={{width: '16rem'}}>
@@ -23,7 +23,7 @@ const SingleCard = ({ alldata }) => {
           <i className="fa-solid fa-star"></i>
           <i className="fa-solid fa-star"></i>
           </div>
-          <Button className='btn btn-light wishButton ' onClick={()=>{addWishlistItem(alldata)}}><i className="fa-solid fa-heart text-danger"></i></Button>
+          <Button className='btn btn-light wishButton ' onClick={()=>{}}><i className="fa-solid fa-heart text-danger"></i></Button>
          </div>
         </div>
       </div>
@@ -32,3 +32,9 @@ const SingleCard = ({ alldata }) => {
 }
 
 export default SingleCard
+
+// if(getWishlistItem(alldata.id)!==undefined){
+//   removeWishlistItem(alldata.id);
+// }else{
+//   addWishlistItem(alldata);
+// }

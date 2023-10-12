@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Card, Col, Button, Container } from 'react-bootstrap';
 import "swiper/css";
-import { FreeMode, Pagination } from "swiper/modules";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,15 +9,12 @@ import CountUp from 'react-countup';
 import Footer from '../components/Footer';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-// import { ProductContext } from '../context/productContext';
 import { LangContext } from '../context/langContext'
-// import MenuList from '../components/MenuList';
 const Home = () => {
-  // const [homedatas] = useContext(ProductContext);
   const [iframe, setIframe] = useState();
  const  [lang] = useContext(LangContext);
   return (
-    <div className='homePage'>
+    <div className='homePage mt-5'>
     {/* Section 1 */}
     <div id="carouselExample" className="carousel slide " >
         <div className="carousel-inner">
@@ -108,8 +105,9 @@ const Home = () => {
       {/* Section 3 */}
 
       <div className='section3 col-12 d-flex  align-items-center my-5 commonBox'>
-        
-            <div className='left d-flex ms-2'>
+      <img className='background-img' src="https://templates.envytheme.com/handout/default/assets/img/others-bg.jpg" alt="" />
+            <div className="cards-box">
+            <div className='left d-flex  col-lg-5 col-sm-2'>
               <div className="cards">
               <div className="boxes d-flex align-items-center">
                 <div className="box p-4">
@@ -140,7 +138,7 @@ const Home = () => {
                 
             </div>
 
-            <div className='right d-flex me-2'>
+            <div className='right d-flex ms-3  col-lg-5 col-sm-2'>
             <div className="arrows">
                 <img height={750} src="https://templates.envytheme.com/handout/default/assets/img/shape/shape2.png" alt="" />
               </div>
@@ -172,23 +170,34 @@ const Home = () => {
                 
                 
             </div>
+            </div>
         </div>
         
      {/* Section 4 */}
      <h1 className='mt-5 quality'>Quality Products</h1>
      <h1 className='mt-3 delOne'>Burgers As Expected <br /> Dilicious One</h1>
      <Container>
-     <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Pagination]}
-          className="mySwiper my-5"
-        >
-          <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+     <Swiper slidesPerView={4}
+         breakpoints={{
+          10: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+         }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          navigation
+         className="mySwiper">
+          <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                 <div className="imgCard">
@@ -203,7 +212,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -218,7 +227,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -233,7 +242,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -248,7 +257,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -263,7 +272,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -278,7 +287,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -293,7 +302,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4} style={{"width":"100%"}} >
+            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
               <Card className='burgerCard'
                >
                  <div className="imgCard">
@@ -349,98 +358,8 @@ const Home = () => {
         <p>Burgers at Hour</p>
       </div>
      </div>
-     
-     {/* Section 6 */}
-
-     <h1 className='mt-5 quality'>Pricing Lists</h1>
-     <h1 className='mt-3 delOne'>Choose & Order Now!</h1>
-     <div className="container section6 mt-5">
-
-     <div className="row">
-     <div className="card" style={{width: '15rem'}}>
-        <i className="fa-solid fa-burger "></i>
-        <div className="card-body">
-          <h5 className="card-title">Burgers</h5>
-        </div>
-      </div>
-      <div className="card" style={{width: '15rem'}}>
-      <i className="fa-solid fa-drumstick-bite"></i>
-        <div className="card-body">
-          <h5 className="card-title">Chickhen</h5>
-        </div>
-      </div>
-      <div className="card" style={{width: '15rem'}}>
-      <i className="fa-solid fa-martini-glass-citrus"></i>
-        <div className="card-body">
-          <h5 className="card-title">Beverage</h5>
-        </div>
-      </div>
-      <div className="card" style={{width: '15rem'}}>
-      <i className="fa-solid fa-mug-hot"></i>
-        <div className="card-body">
-          <h5 className="card-title">Coffee</h5>
-        </div>
-      </div>
-      <div className="card" style={{width: '15rem'}}>
-      <i className="fa-solid fa-pizza-slice"></i>
-        <div className="card-body">
-          <h5 className="card-title">Snacks</h5>
-        </div>
-      </div>
-     </div>
     
-     </div>
 
-     {/* Section 7 */}
-
-     {/* <div className=" container col-12 d-flex my-5 ">
-
-       {homedatas.slice(0,4).map(item=>(
-       <div className="col-6 d-flex flex-column justify-content-between leftMenu">
-          <div className="menuList d-flex flex-column">
-         <MenuList key={item.id} allmenu={item} />
-         </div>
-       </div>  
-       ))}
-</div> */}
-       {/* <div className="col-6 d-flex flex-column justify-content-between leftMenu">
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">{homedatas.name} .................... <span>{homedatas.price}</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">Magninil's Apple Juice .................... <span>$12</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">6 Piece Sostikno Sticks .................... <span>$45</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">Dilso Chicken Sandwich .................... <span>$12</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-       </div> */}
-
-       {/* <div className="col-6 d-flex flex-column justify-content-between leftMenu">
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">Ocean Spray Swits Juice ................ <span>$12</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">Smoked Brisket Sandwich .............. <span>$45</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">Japanies Dilicious Burger .............. <span>$12</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-         <div className="menuList d-flex flex-column">
-          <h3 ><a className='nav-link' href="/product">Fotboy Combo Packs ....................... <span>$12</span></a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse  ultrices gravida.</p>
-         </div>
-       </div> */}
-   
 
      {/* Section 8 */}
 
@@ -449,12 +368,25 @@ const Home = () => {
 
      <div className="container mb-5 section8">
      <Swiper slidesPerView={4}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Pagination]} className="mySwiper">
+         breakpoints={{
+          10: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+         }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          navigation
+         className="mySwiper">
         <SwiperSlide> 
         <div className="card sliderCard" style={{width: '18rem'}}>
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image3.jpg" className="card-img-top" alt="..." />

@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const Contact = () => {
   return (
     <>
-     <div className="container mt-5">
+     <div className="container  contactPage">
 
 {/* Section 1 */}
 <div className="row align-items-center contact1 mb-5 ">

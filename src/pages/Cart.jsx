@@ -22,7 +22,7 @@ const Cart = () => {
   };
   return (
     <>
-      <div className="container mt-5">
+      <div className="container cartPage">
 
         <table className="table cartTable">
           <thead>
