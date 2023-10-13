@@ -112,7 +112,7 @@ const Home = () => {
               <div className="boxes d-flex align-items-center">
                 <div className="box p-4">
                     <h3>{lang==='en' ? 'Mild Butter' : 'Yumşaq Kərə Yağı'}</h3>
-                    <p className='fs-5 '>Learning do amet contur diiscvt suia <br /> non nuameius velit modi</p>
+                    <p className='fs-5 '>Learning do amet contur diiscvt suiagfghj <br /> non nuameius velit modi</p>
                 </div>
                 <i className="fa-solid fa-caret-right  fs-1"></i>
                 </div>
