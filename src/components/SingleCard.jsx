@@ -6,7 +6,8 @@ import { useWishlist } from 'react-use-wishlist';
 
 const SingleCard = ({ alldata }) => {
   const { addItem } = useCart();
-  const { addWishlistItem ,getWishlistItem,removeWishlistItem} = useWishlist();
+  const { addWishlistItem ,getWishlistItem ,removeWishlistItem} = useWishlist();
+
   return (
     <div className=' col-sm-12 col-md-3 singleCard'>
         <div className=" card" style={{width: '16rem'}}>
@@ -14,7 +15,7 @@ const SingleCard = ({ alldata }) => {
             <Button className='add-to-cart rounded-0' onClick={()=>addItem(alldata)}>ADD TO CART  <i className="fa-solid fa-cart-shopping"></i> </Button>
         <div className="card-body">
           <h5 className="card-title text-center fw-bold">{alldata.name}</h5>
-          <p className="lead text-dark mt-3 text-center">{alldata.price} <span>$60.50</span></p>
+          <p className="lead text-dark mt-3 text-center">${alldata.price} <span>$60.50</span></p>
          <div className="d-flex justify-content-between align-items-center">
          <div className="rating text-center">
           <i className="fa-solid fa-star"></i>
@@ -23,7 +24,11 @@ const SingleCard = ({ alldata }) => {
           <i className="fa-solid fa-star"></i>
           <i className="fa-solid fa-star"></i>
           </div>
-          <Button className='btn btn-light wishButton ' onClick={()=>{}}><i className="fa-solid fa-heart text-danger"></i></Button>
+          <Button className='btn btn-light wishButton ' onClick={()=>{if(getWishlistItem(alldata.id)!==undefined){
+            removeWishlistItem(alldata.id);
+          }else{
+            addWishlistItem(alldata);
+          }}}><i className="fa-solid fa-heart text-danger"></i></Button>
          </div>
         </div>
       </div>
@@ -32,9 +37,3 @@ const SingleCard = ({ alldata }) => {
 }
 
 export default SingleCard
-
-// if(getWishlistItem(alldata.id)!==undefined){
-//   removeWishlistItem(alldata.id);
-// }else{
-//   addWishlistItem(alldata);
-// }

@@ -1,17 +1,16 @@
 import React, { useContext } from 'react'
-import {  Container } from 'react-bootstrap';
+import {  Card, Col, Container } from 'react-bootstrap';
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { A11y,Navigation,Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { ProductContext } from '../context/productContext';
-import TeamCard from '../components/TeamCard';
 
 const About = () => {
-  const [teamdatas] = useContext(ProductContext);
+  const [productdata] = useContext(ProductContext);
   return (
     <>
 {/* Section 1 */}
@@ -21,7 +20,11 @@ const About = () => {
         
         <h1 className="display-5 fw-bold text-light mt-5">About Handout</h1>
         <div className="col-lg-6 mx-auto d-flex justify-content-center">
-          <div className="d-flex align-items-center lead mb-4"><a className='nav-link me-3' href="/">Home</a> <i className="fa-solid fa-mug-hot me-3"></i> <a className='nav-link' href="/about">About</a> </div>
+          <div className="d-flex align-items-center lead mb-4">
+            <Link className='nav-link me-3' to="/">Home</Link> 
+            <i className="fa-solid fa-mug-hot me-3"></i>
+             <Link className='nav-link' href="/about">About</Link> 
+             </div>
         </div>
       </div>
       <div className="below">
@@ -75,20 +78,47 @@ Eusmod tempor incididunt labore et dolore magna aliqua. Quis ipsum suspendisse u
      <h1 className='mt-3 delOne'>Our Experience Team</h1>
 
      <Container className='hero3'>
-     <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Pagination]}
-          className="mySwiper my-5 row"
-        > {teamdatas.slice(0,5).map(item=>(
-              <div className="col">
-                <TeamCard key={item.id} teamdata={item}/>
-              </div>
-            ))}
+     <Swiper slidesPerView={4}
+         breakpoints={{
+          10: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+         }}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          navigation
+         className="mySwiper">{productdata.slice(0,5).map((item) =>{
+          if(item){
+            return(
+              <SwiperSlide> 
+              <Col className='colBox1' sm={10} md={4} style={{"width":"100%"}} >
+             <Card className='burgerCard1'
+                 >
+                  <div className="imgCard1">
+                  <Card.Img  height={300}   variant="top"  src={item.team_image} className='cardImg1' />
+                  <div className=' order rounded-5 '><div className="logos"><i className="fa-brands fa-facebook-f"></i> <i className="fa-brands fa-twitter"></i> <i className="fa-brands fa-instagram"></i> <i className="fa-brands fa-pinterest-p"></i> <i className="fa-brands fa-youtube"></i> </div></div>
+                  </div>
+                  
+                  <Card.Body>
+                    <Card.Title className='text-center title'>{item.team_name}</Card.Title>
+                    <p className='text-center grey'>{item.team_pos}</p>       
+                  </Card.Body>
+                </Card>
+              </Col></SwiperSlide>
+            )
+          }
+          
+})}
         
             
       </Swiper>
@@ -114,25 +144,22 @@ Eusmod tempor incididunt labore et dolore magna aliqua. Quis ipsum suspendisse u
 
       {/* Section 5 */}
 
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper about5">
-        <SwiperSlide>
-        <div className="px-4 py-5 my-5 text-center">
-        <img className="d-block mx-auto mb-4" src="https://templates.envytheme.com/handout/default/assets/img/feedback/image.png" alt="" width={200} height={220} />
-        <h3 className=" fw-bold text-body-emphasis">David McLean</h3>
-        <span>CEO, Foodplanet</span>
-          <p className="lead mb-4 text-dark">I chose Handout because of their value And incredible superior customer Service they really awesome Food with quality service Ha of their value And incredible sup with quality</p>
-      </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="px-4 py-5 my-5 text-center">
-        <img className="d-block mx-auto mb-4" src="https://templates.envytheme.com/handout/default/assets/img/feedback/image.png" alt="" width={200} height={220} />
-        <h3 className=" fw-bold text-body-emphasis">David McLean</h3>
-        <span>CEO, Foodplanet</span>
-          <p className="lead mb-4 text-dark">I chose Handout because of their value And incredible superior customer Service they really awesome Food with quality service Ha of their value And incredible sup with quality</p>
-      </div>
-        </SwiperSlide>
+      <Swiper pagination={true} modules={[Pagination]} className="mySwiper about5 mb-5">
+        {productdata.slice(0,4).map((item)=>{
+          if(item){
+            return(
+              <SwiperSlide>
+              <div className="px-4 py-5 my-5 text-center">
+              <img className="d-block mx-auto mb-4" src="https://templates.envytheme.com/handout/default/assets/img/feedback/image.png" alt="" width={200} height={220} />
+              <h3 className=" fw-bold text-body-emphasis">{item.review_name}</h3>
+              <span>CEO, Foodplanet</span>
+                <p className="lead mb-4 text-dark">{item.review_content}</p>
+            </div>
+              </SwiperSlide>
+            )
+          }
+        })}
       </Swiper>
-      <Footer />
     </>
   )
 }

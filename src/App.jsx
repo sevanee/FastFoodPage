@@ -15,6 +15,8 @@ import { CartProvider } from 'react-use-cart'
 import Blog from './pages/Blog'
 import Wishlist from './pages/Wishlist'
 import { WishlistProvider } from 'react-use-wishlist'
+import FAQ from './pages/FAQ'
+import Footer from './components/Footer'
 
 
 const Main = () => {
@@ -32,8 +34,10 @@ const Main = () => {
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/blog' element={<Blog />}></Route>
           <Route path='/wishlist' element={<Wishlist />}></Route>
+          <Route path='/faq' element={<FAQ />}></Route>
           <Route path='/product/:url' element={<ProductDetails />}></Route>
         </Routes>
+        <Footer />
         </ProductProvider>
         </div>
   )

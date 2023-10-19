@@ -11,7 +11,9 @@ const datas = [
     weight: '200gr',
     team_image:'https://templates.envytheme.com/handout/default/assets/img/team/1.png',
     team_name:'Arnold Russel',
-    team_pos:'Chief Guru'
+    team_pos:'Chief Guru',
+    review_name:'David McLean',
+    review_content:'I chose Handout because of  their value And incredible  superior customer Service they really awesome Food with quality service'
     
   },
   {
@@ -26,7 +28,9 @@ const datas = [
     weight: '210gr',
     team_image:'https://templates.envytheme.com/handout/default/assets/img/team/2.png',
     team_name:'Mitchel Smith',
-    team_pos:'Chief Instructor'
+    team_pos:'Chief Instructor',
+    review_name:'Arnold Russel',
+    review_content:'I chose Handout because of  their value And incredible  superior customer Service they really awesome Food with quality service'
   },
   {
       id:3,
@@ -40,7 +44,9 @@ const datas = [
     weight: '114gr',
     team_image:'https://templates.envytheme.com/handout/default/assets/img/team/3.png',
     team_name:'Nicholas Barnett',
-    team_pos:'Executive Chef'
+    team_pos:'Executive Chef',
+    review_name:'Nicholas Barnett',
+    review_content:'I chose Handout because of  their value And incredible  superior customer Service they really awesome Food with quality service'
   },
   {
       id:4,
@@ -54,7 +60,9 @@ const datas = [
     weight: '110gr',
     team_image:'https://templates.envytheme.com/handout/default/assets/img/team/2.png',
     team_name:'Minnesota Twins',
-    team_pos:'General Manager'
+    team_pos:'General Manager',
+    review_name:'Minnesota Twins',
+    review_content:'I chose Handout because of  their value And incredible  superior customer Service they really awesome Food with quality service'
   },
   {
       id:5,

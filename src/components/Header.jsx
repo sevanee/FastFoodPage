@@ -20,7 +20,7 @@ const Header = () => {
             <LinkContainer to= '/'><Nav.Link  className='page'>{lang==='en' ? 'Home' : 'Ana Səhifə'}</Nav.Link></LinkContainer>
             <LinkContainer to='/about'><Nav.Link  className='page'>{lang==='en' ? 'About' : 'Haqqımızda'}</Nav.Link></LinkContainer>
             
-            <li className="nav-item dropdown page">
+            <li className="nav-item dropdown page shopDrop">
                <a className="nav-link dropdown-toggle page" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {lang==='en' ? 'Shop' : 'Mağaza'}
         </a>
@@ -30,6 +30,7 @@ const Header = () => {
           
           <li><LinkContainer to="cart"><Link className="dropdown-item" >{lang==='en' ? 'Cart' : 'Səbət'}</Link></LinkContainer></li>
             <li><LinkContainer to='checkout'><Link className="dropdown-item" >{lang==='en' ? 'Checkout' : 'Ödəniş'}</Link></LinkContainer></li>
+            <li><LinkContainer to='faq'><Link className="dropdown-item" >{lang==='en' ? 'FAQ' : 'TVS'}</Link></LinkContainer></li>
         </ul>
       </li>
           <LinkContainer to="/blog"><Nav.Link  className='page'>{lang==='en' ? 'Blog' : 'Bloq'}</Nav.Link></LinkContainer>  
@@ -37,11 +38,11 @@ const Header = () => {
           </Nav>
           <Nav className="ms-auto">
             <LinkContainer to='/wishlist'><Nav.Link><i className="fa-regular fa-heart fs-5 mt-3"></i></Nav.Link></LinkContainer>
-            <LinkContainer to="/cart"><Nav.Link  > <button type="button" className="btn btn-light position-relative mt-2">
+            <LinkContainer to="/cart"><Nav.Link  > <button type="button" className="btn btn-light position-relative mt-2 cartBtn">
             <i className="fa-solid fa-cart-shopping"></i>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
         {totalItems}
-          <span className="visually-hidden">unread messages</span>
+          <span className="visually-hidden ">unread messages</span>
         </span>
       </button></Nav.Link></LinkContainer>
             

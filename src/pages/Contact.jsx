@@ -102,7 +102,7 @@ const Contact = () => {
 
 
 </div>
-<Footer />
+
     </>
    
 

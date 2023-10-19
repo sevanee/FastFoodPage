@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import Footer from '../components/Footer';
 import { ProductContext } from '../context/productContext';
 import SingleCard from '../components/SingleCard';
-// import { useEffect } from 'react';
 import { useState } from 'react';
 
 const ShopList = () => {
@@ -17,9 +16,6 @@ const ShopList = () => {
     ))
     setCatData(result);
   }
-  // useEffect(() => {
-  //   filterResult('Burger');
-  // }, [])
 
   const searchSubmited=(e)=>{
     e.preventDefault();
@@ -27,25 +23,10 @@ const ShopList = () => {
 }
   return (
     <>
-      <div className=" col">
-     <div className="searchForm col-lg-4 mx-auto">
-     <form onSubmit={searchSubmited}>
-                   <div className="input-group mb-3">
-                      <input onChange={e=>setQuery(e.target.value)} type="text" className="form-control" placeholder="Enter product" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                      <button className="btn btn-warning" type="submit" id="button-addon2">Search</button>
-                    </div>
-                   </form>
-                   <ul className="list-group">
-                      {query === null ? null:productdata.filter(value=>value.name.toLocaleLowerCase().includes(searchvalue)).map(i=>(
-                        <a href={`/product/${i.id}`} key={i.id} className="list-group-item">{i.name}</a>
 
-                      ))}
-      
-                    </ul>
-     </div>
-      </div>
 
         <div className="mt-5 container shopList row">
+          
         <div className="col-sm col-md-2 ">
         <ul className="list-group border border-warning fw-bold">
           <li className="list-group-item border border-warning" onClick={()=>{filterResult('Burger')}}>Burger</li>
@@ -74,7 +55,6 @@ const ShopList = () => {
 
         </div>
       </div>
-      <Footer />
     </>
   )
 }

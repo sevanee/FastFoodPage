@@ -60,6 +60,13 @@
   border: 3px solid #fbb403;
 }
 
+.shopDrop {
+  transition-duration: 0.2s;
+}
+.shopDrop:hover .dropdown-menu {
+  display: block !important;
+}
+
 .orderBtn {
   background-color: #fbb403 !important;
   color: #1d1d1d;
@@ -171,17 +178,9 @@
   background-color: white;
   border: rgba(0, 0, 0, 0.09) 1px solid;
   margin-bottom: 5px;
-  transition-duration: 0.5s;
 }
 .box p {
   color: #737373;
-}
-.box:hover {
-  background-color: #fbb403;
-  color: white !important;
-}
-.box:hover p {
-  color: white;
 }
 
 .commonBox {
@@ -294,17 +293,10 @@
 
 .orders {
   height: 500px;
-  margin-top: 100px !important;
   background-image: url(https://templates.envytheme.com/handout/default/assets/img/video/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-.orders .backCircle {
-  width: 100px;
-  height: 100px;
-  border: 3px solid #fbb403;
-  border-radius: 50%;
 }
 .orders .video {
   width: 99px;
@@ -416,7 +408,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  margin-top: 70px !important;
 }
 .section9 .lead {
   line-height: 1.8;
@@ -605,6 +596,7 @@
 }
 
 .section8 .card {
+  overflow-y: hidden;
   border: none;
 }
 .section8 .card:hover .front {
@@ -802,6 +794,9 @@
   border-color: #1d1d1d;
 }
 
+.shop1 {
+  margin-top: 130px;
+}
 .shop1 .lead {
   font-weight: bold;
 }
@@ -816,17 +811,6 @@
   font-weight: 400;
   font-family: "Poppins", sans-serif !important;
   font-size: 18px;
-}
-.shop1 .buyBtn {
-  background-color: #f2f2f2;
-  transition-duration: 0.5s;
-  width: 700px;
-  padding: 10px 0px 10px 0px;
-  font-size: 17px;
-}
-.shop1 .buyBtn:hover {
-  background-color: #fbb403;
-  color: white !important;
 }
 
 .dropdown1 {
@@ -893,6 +877,9 @@
   font-weight: 700;
 }
 
+.shopList .list-group-item {
+  cursor: pointer;
+}
 .shopList .card {
   margin: 0px 20px 20px 0px;
   border: none;
@@ -1168,18 +1155,148 @@ body {
   padding: 2px;
 }
 
+.light .orders {
+  background-color: #f8f9fa !important;
+}
 .light .navbar {
   background-color: #f8f9fa !important;
 }
 .light .navbar * {
   color: #1d1d1d;
 }
+.light .navbar .badge {
+  background-color: red !important;
+  color: white !important;
+}
+.light .navbar .cartBtn {
+  background-color: white !important;
+  border: none !important;
+}
+.light .txtBody * {
+  color: white !important;
+}
+.light .homeSection2 {
+  background-color: #f8f9fa;
+}
+.light .homeSection2 h1 {
+  color: #1d1d1d;
+}
+.light .section3 {
+  background-color: #f8f9fa;
+}
+.light .section3 .box {
+  background-color: white;
+  color: #737373;
+  transition-duration: 0.5s;
+}
+.light .section3 .box h3 {
+  color: #000000;
+}
+.light .section3 .box:hover {
+  background-color: #fbb403;
+  color: white !important;
+}
+.light .section3 .box:hover p {
+  color: white !important;
+}
+.light .section3 .box:hover h3 {
+  color: white !important;
+}
 
-.dark .navbar {
+.dark .section11 {
+  background-color: #000000;
+}
+.dark .section10 {
+  background-color: #000000;
+}
+.dark .section10 .swiper-slide * {
+  color: white !important;
+}
+.dark .section9 {
+  background-color: #0e0e0e;
+}
+.dark .section9 h1 {
+  color: white !important;
+}
+.dark .section8 {
+  background-color: #000000;
+}
+.dark .section8 .card {
+  background-color: #000000;
+}
+.dark .pricess {
+  background-color: #1d1d1d;
+}
+.dark .pricess * {
+  color: white !important;
+}
+.dark .dropdown-item {
+  transition-duration: 0.5s;
+}
+.dark .dropdown-item:hover {
+  background-color: #1d1d1d;
+  color: #ce7b04;
+  transform: translateX(3px);
+}
+.dark .burgerCard {
   background-color: #000000 !important;
+}
+.dark .burgerCard .title {
+  color: white;
+}
+.dark .delOne {
+  color: white !important;
+}
+.dark .orders {
+  background-color: #000000 !important;
+}
+.dark .navbar {
+  background-color: black !important;
+}
+.dark .navbar .dropdown1 {
+  background-color: #1d1d1d;
+  color: white;
+}
+.dark .navbar .badge {
+  color: black !important;
+  background-color: white !important;
 }
 .dark .navbar * {
   color: white !important;
+}
+.dark .navbar .cartBtn {
+  background-color: black !important;
+  border: none !important;
+}
+.dark .txtBody * {
+  color: #1d1d1d !important;
+}
+.dark .homeSection2 {
+  background-color: black;
+}
+.dark .homeSection2 h1 {
+  color: white;
+}
+.dark .section3 {
+  background-color: black;
+}
+.dark .section3 .box {
+  background-color: #1d1d1d;
+  color: white !important;
+  transition-duration: 0.5s;
+}
+.dark .section3 .box h3 {
+  color: white !important;
+}
+.dark .section3 .box:hover {
+  background-color: #fbb403;
+  color: white !important;
+}
+.dark .section3 .box:hover p {
+  color: white;
+}
+.dark .homeSection4 {
+  background-color: #000000;
 }
 
 .langBtn {
@@ -1215,7 +1332,13 @@ body {
   background-color: none !important;
 }
 
+.wishlist {
+  padding-top: 100px;
+}
 .wishlist .fa-trash-can {
+  cursor: pointer;
+}
+.wishlist .fa-cart-shopping {
   cursor: pointer;
 }
 
@@ -1233,4 +1356,86 @@ body {
 
 .cartPage {
   margin-top: 100px;
+}
+.cartPage .fa-trash-can {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .pricess {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cups {
+    margin: 10px 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .pricess {
+    justify-content: space-between;
+  }
+  .cups {
+    width: 45%;
+    text-align: center;
+  }
+}
+@media (min-width: 993px) {
+  .pricess {
+    justify-content: space-evenly;
+  }
+  .cups {
+    width: 22%;
+    text-align: center;
+  }
+}
+.faq-area .accordion-item {
+  border-radius: 0 !important;
+  border: none !important;
+  margin-bottom: 10px;
+  padding: 20px 20px 20px 50px;
+}
+.faq-area .accordion-item .accordion-button {
+  font-size: 20px !important;
+  font-weight: 700;
+}
+.faq-area input {
+  background-color: #ffffff;
+  border: none !important;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+.faq-area textarea {
+  border: none !important;
+  border-radius: 0;
+}
+
+.searchForm {
+  z-index: 900;
+}
+
+.orders {
+  position: relative;
+}
+.orders .burger-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orders .burger-video iframe {
+  width: 90%;
+  height: 80%;
+  z-index: 3;
 }/*# sourceMappingURL=style.css.map */

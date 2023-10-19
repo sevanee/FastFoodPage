@@ -1,6 +1,15 @@
 
 @import 'section3';
 
+
+.shopDrop{
+    transition-duration: 0.2s;
+    &:hover{
+      .dropdown-menu{
+        display: block !important;
+      }
+    }
+}
 .orderBtn{
     background-color: #fbb403 !important;
     color: #1d1d1d;
@@ -110,15 +119,7 @@
     }
     
     margin-bottom: 5px;
-    transition-duration: 0.5s;
-    &:hover{
-        background-color: #fbb403;
-        color: white !important;
-        p{
-            color: white;
-        }
-       
-    }
+   
 }
 .commonBox{
     justify-content: space-between;
@@ -226,20 +227,11 @@
 
 .orders{
     height: 500px;
-    margin-top: 100px !important;
     background-image: url(https://templates.envytheme.com/handout/default/assets/img/video/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    .backCircle{
-        width: 100px;
-        height: 100px;
-        border: 3px solid  #fbb403;
-        border-radius: 50%;
-        // padding: 0px;
-        // animation: circleAnimate 1s infinite linear;
-        
-    }
+    
     .video{
         width: 99px;
         height: 99px;
@@ -248,6 +240,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+       
     }
 }
 @keyframes circleAnimate {
@@ -349,7 +342,6 @@
     background-size: contain;
     background-repeat: no-repeat;    
     background-position: right;
-    margin-top: 70px !important;
     .lead{
         line-height: 1.8;
     color: #737373;
@@ -541,6 +533,7 @@
 
 .section8{
     .card{
+        overflow-y: hidden;
         border: none;
         &:hover{
             .front{
@@ -751,6 +744,7 @@
         }
     }
     .shop1{
+        
         .lead{
             font-weight: bold;
             span{
@@ -766,20 +760,8 @@
     font-family: "Poppins", sans-serif !important;
     font-size: 18px;
         }
-        // .checkbox{
-        //     background-color: #ce7b04;
-        // }
-        .buyBtn{
-            background-color: #f2f2f2;
-            transition-duration: 0.5s;
-            width: 700px;
-            padding: 10px 0px 10px 0px;
-            font-size: 17px;
-            &:hover{
-                background-color: #fbb403;
-                color: white !important;
-            }
-        }
+            margin-top: 130px;
+    
     }
     .dropdown1{
         border: none !important;
@@ -850,6 +832,9 @@
         }
     }
 .shopList{
+    .list-group-item{
+        cursor: pointer;
+    }
     .card{
         margin: 0px 20px 20px 0px;
         i{
@@ -1127,22 +1112,167 @@ body{
 }
 
 .light{
+    .orders{
+        background-color:#f8f9fa !important;
+    } 
     .navbar{
         background-color: #f8f9fa !important;
        *{
         color:#1d1d1d;
        }
+      
+       .badge{
+        background-color: red !important;
+        color: white !important;
+       }
+       .cartBtn{
+        background-color: white !important;
+        border: none !important;
     }
+    
+    
+    }
+    .txtBody{
+        *{
+            color: white !important;
+        }
+    }
+    .homeSection2{
+        background-color: #f8f9fa;
+        h1{
+            color: #1d1d1d;
+        }
+    }
+    .section3{
+        background-color: #f8f9fa;
+        .box{
+            background-color: white;
+            color: #737373;
+            h3{
+                color: #000000 ;
+            }
+            transition-duration: 0.5s;
+            &:hover{
+                background-color: #fbb403;
+                color: white !important;
+                p{
+                    color: white !important;
+                }
+                h3{
+                    color: white !important;
+                }
+               
+            }
+        }
+    }
+    
 }
 
 
 .dark{
+    .section11{
+        background-color: #000000;
+    }
+    .section10{
+        background-color: #000000;
+       .swiper-slide{
+        *{
+            color: white !important;
+        }
+       }
+    }
+    .section9{
+        background-color: #0e0e0e;
+        h1{
+            color: white !important;
+        }
+    }
+    .section8{
+        background-color: #000000;
+        .card{
+            background-color: #000000 ;
+        }
+    }
+    .pricess{
+        background-color: #1d1d1d;
+        *{
+            color: white !important;
+        }
+    }
+    .dropdown-item{
+        transition-duration: 0.5s;
+        &:hover{
+            background-color: #1d1d1d;
+            color: #ce7b04 ;
+            transform: translateX(3px);
+        }
+    }
+    .burgerCard{
+        background-color: #000000 !important;
+        .title{
+            color: white;
+        }
+    }
+    .delOne{
+        color: white !important;
+    }
+    .orders{
+        background-color: #000000 !important;
+    } 
    .navbar{
-    background-color: #000000 !important;
+    .dropdown1{
+        background-color: #1d1d1d;
+        color: white;
+    }
+    background-color:black !important;
+    .badge{
+        color:black !important;
+        background-color: white !important;
+    }
     *{
         color: white !important ;
     }
+    .cartBtn{
+        background-color:black !important;
+        border: none !important;
+    }
+    
+     
+    }
+       .txtBody{
+    *{
+        color: #1d1d1d !important;
+    }
    }
+   .homeSection2{
+    background-color: black;
+    h1{
+        color: white;
+    }
+}
+
+.section3{
+    background-color: black;
+    .box{
+        background-color: #1d1d1d;
+        color: white !important;
+        h3{
+            color: white !important;
+        }
+        transition-duration: 0.5s;
+        &:hover{
+            background-color: #fbb403;
+            color: white !important;
+            p{
+                color: white;
+            }
+           
+        }
+    }
+}
+.homeSection4{
+    background-color: #000000;
+}
 }
 .langBtn{
     border: none !important;
@@ -1182,7 +1312,11 @@ body{
     }
 }
 .wishlist{
+    padding-top: 100px;
     .fa-trash-can{
+        cursor: pointer;
+    }
+    .fa-cart-shopping{
         cursor: pointer;
     }
 }
@@ -1198,4 +1332,92 @@ body{
 }
 .cartPage{
     margin-top: 100px;
+    .fa-trash-can{
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .pricess {
+      flex-direction: column;
+      align-items: center;
+    }
+    .cups {
+      margin: 10px 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+     
+  @media (min-width: 577px) and (max-width: 992px) {
+    .pricess {
+      justify-content: space-between;
+    }
+    .cups {
+      width: 45%;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .pricess {
+      justify-content: space-evenly;
+    }
+    .cups {
+      width: 22%;
+      text-align: center;
+    }
+  }
+  .faq-area{
+    .accordion-item{
+      border-radius: 0 !important;
+      border: none !important;
+      margin-bottom: 10px;
+      padding: 20px 20px 20px 50px;
+   
+   .accordion-button{
+        font-size: 20px !important;
+        font-weight: 700;
+        
+    }
+    }
+    input{
+        background-color: #ffffff;
+        border: none !important;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 0;
+        margin-bottom: 15px;
+    }
+    textarea{
+        border: none !important;
+        border-radius: 0;
+    }
+  }
+  .searchForm{
+    z-index: 900;
+  }
+  .orders{
+    position: relative;
+    .burger-video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        iframe{
+            width: 90%;
+            height: 80%;
+            z-index: 3;
+        }
+    }
 }

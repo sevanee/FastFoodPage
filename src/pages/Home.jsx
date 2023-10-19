@@ -10,9 +10,12 @@ import Footer from '../components/Footer';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import { LangContext } from '../context/langContext'
+import { ProductContext } from '../context/productContext';
+
 const Home = () => {
   const [iframe, setIframe] = useState();
- const  [lang] = useContext(LangContext);
+  const [productdata] = useContext(ProductContext);
+  const  [lang] = useContext(LangContext);
   return (
     <div className='homePage mt-5'>
     {/* Section 1 */}
@@ -46,7 +49,7 @@ const Home = () => {
           <div className="col-lg-6 txtBody" >
             <img width={600} height={120}  src="https://templates.envytheme.com/handout/default/assets/img/slider/burger.png" alt="" />
             <p className="lead mt-3 text-light"> {lang==='en' ? 'UPDATED MENU\'S ITEM' : 'YENILƏNMİŞ MENYU ELEMENTİ'}</p>
-            <h1 className='chicken'> {lang==='en' ? 'CHICKENSUP BURGER' : 'TOYUQ ƏTLİ BURGER'} <br /> </h1>
+            <h1 className='chicken'> {lang==='en' ? 'THE CRISPY BUN' : 'XIRTILDAYAN ÇÖRƏK'} <br /> </h1>
             <p className="mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Integrated With Mushroom' : 'Göbələk İlə Birləşdirilmişdir'} </p>
             <p className=" mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Cheese Integrated' : 'Pendir İlə Birləşdirilmiş'} </p>
             <p className=" mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Bacon Flavour' : 'Bekon Dadı'}</p>
@@ -64,7 +67,7 @@ const Home = () => {
           <div className="col-lg-6 txtBody " >
             <img width={600} height={120}  src="https://templates.envytheme.com/handout/default/assets/img/slider/burger.png" alt="" />
             <p className="lead mt-3 text-light"> {lang==='en' ? 'UPDATED MENU\'S ITEM' : 'YENILƏNMİŞ MENYU ELEMENTİ'}</p>
-            <h1 className='chicken'> {lang==='en' ? 'CHICKENSUP BURGER' : 'TOYUQ ƏTLİ BURGER'} <br /> </h1>
+            <h1 className='chicken'> {lang==='en' ? 'BEEF FRESH' : 'TƏZƏ MAL ƏTİ'} <br /> </h1>
             <p className="mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Integrated With Mushroom' : 'Göbələk İlə Birləşdirilmişdir'} </p>
             <p className=" mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Cheese Integrated' : 'Pendir İlə Birləşdirilmiş'} </p>
             <p className=" mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Bacon Flavour' : 'Bekon Dadı'}</p>
@@ -85,7 +88,7 @@ const Home = () => {
 
 {/* Section 2 */}
 
-      <div className=" col-xxl-12 pe-4 py-5">
+      <div className=" col-xxl-12 pe-4 py-5 homeSection2">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           
           <div className="col-lg-6">
@@ -104,7 +107,7 @@ const Home = () => {
 
       {/* Section 3 */}
 
-      <div className='section3 col-12 d-flex  align-items-center my-5 commonBox'>
+      <div className='section3 col-12 d-flex  align-items-center  commonBox'>
       <img className='background-img' src="https://templates.envytheme.com/handout/default/assets/img/others-bg.jpg" alt="" />
             <div className="cards-box">
             <div className='left d-flex  col-lg-5 col-sm-2'>
@@ -112,7 +115,7 @@ const Home = () => {
               <div className="boxes d-flex align-items-center">
                 <div className="box p-4">
                     <h3>{lang==='en' ? 'Mild Butter' : 'Yumşaq Kərə Yağı'}</h3>
-                    <p className='fs-5 '>Learning do amet contur diiscvt suiagfghj <br /> non nuameius velit modi</p>
+                    <p className='fs-5 '>Learning do amet contur diiscvt suia <br /> non nuameius velit modi</p>
                 </div>
                 <i className="fa-solid fa-caret-right  fs-1"></i>
                 </div>
@@ -174,9 +177,11 @@ const Home = () => {
         </div>
         
      {/* Section 4 */}
-     <h1 className='mt-5 quality'>Quality Products</h1>
-     <h1 className='mt-3 delOne'>Burgers As Expected <br /> Dilicious One</h1>
-     <Container>
+
+     <div className='homeSection4 pb-5'>
+        <h1 className=' py-5 quality'>Quality Products</h1>
+     <h1 className='mb-3 mt-2 delOne'>Burgers As Expected <br /> Dilicious One</h1>
+     <Container >
      <Swiper slidesPerView={4}
          breakpoints={{
           10: {
@@ -197,150 +202,64 @@ const Home = () => {
           spaceBetween={50}
           navigation
          className="mySwiper">
-          <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
-            <SwiperSlide> <Col className='colBox' sm={10} md={4}  >
-              <Card className='burgerCard'
-               >
-                 <div className="imgCard">
-                <Card.Img  height={300}  variant="top" src='https://templates.envytheme.com/handout/default/assets/img/burger-shop/2.png' className='cardImg' />
-                <LinkContainer to="/product"><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
-                </div>
-                
-                <Card.Body>
-                  <Card.Title className='text-center title'>Crazy Burger</Card.Title>
-                  <p className='text-center grey'>Learning do amet contur dicivt <br /> suia non nuameius velit</p>
-                   <p className='text-center price'>$35.000</p>                  
-                </Card.Body>
-              </Card>
-            </Col></SwiperSlide>
+          
+          {
+            productdata.slice(0,6).map((item)=>  {
+              if(item){
+                return(
+  
+                  <SwiperSlide className='mb-2'> 
+                  <Col className='colBox ' sm={10} md={4}  >
+                    <Card className='burgerCard mb-1'
+                     >
+                      <div className="imgCard">
+                      <Card.Img  height={300}  variant="top" src={item.image} className='cardImg' />
+                      <LinkContainer to={`/product/${item.id}`}><button className='btn order rounded-5 '>ORDER ONLINE<i className="fa-solid fa-caret-right"></i></button></LinkContainer>
+                      </div>
+                      
+                      <Card.Body>
+                        <Card.Title className='text-center title'>{item.name}</Card.Title>
+                        <p className='text-center grey'>{item.description.substring(0,25)}</p>
+                         <p className='text-center price'>${item.price}</p>                  
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </SwiperSlide>
+                )
+              }
+            })
+          }
+           
+           
       </Swiper>
      </Container>
+     </div>
+   
 
      {/* Section 5 */}
 
-     {/* <section className='five d-flex align-items-center justify-content-center'>
-        <div className='d-flex align-items-center justify-content-center flex-column'>
-          <h1>Watch Our Video</h1>
-          <button className='bg-transparent mt-5 d-flex align-items-center justify-content-center' onClick={() => { setIframe(<iframe width={660} height={315} src="https://www.youtube.com/embed/qV8PpOiPFW4?start=94" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />) }}><i className="fa-solid fa-play"></i>
-          </button>
-          {iframe}
-
-        </div>
-      </section> */}
-
      <div className="orders col-12 mt-5 d-flex justify-content-center align-items-center">
+      
       <div className="backCircle ">
       <div className="video ">
-        <button className='btn video-btn bg-transparent' onClick={()=>{setIframe(<iframe width="660" height="315" src="https://www.youtube.com/embed/qaHWDmFtBl0?si=az37yL_SHQkMfhuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>)}}><i className="fa-solid fa-play fs-1 text-center "></i></button>
-        {iframe}
+        <button className='btn video-btn bg-transparent' onClick={()=>setIframe(true)}><i class="fa-solid fa-play fs-2"></i></button>
+
+          {
+            iframe=== true ? <>
+            <div className="burger-video">
+          
+        <iframe  src="https://www.youtube.com/embed/qaHWDmFtBl0?si=az37yL_SHQkMfhuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <button className='btn btn-dark esc d-flex align-items-center' onClick={()=> setIframe(false)} >X</button>
+            </div>
+
+            </> : ""
+          }
       </div>
       </div>
      </div>
-     <div className="pricess col-12 d-flex align-items-center justify-content-evenly">
+
+     {/* Section 6 */}
+     <div className="pricess col-12 d-flex align-items-center justify-content-evenly ">
       <div className="cups d-flex flex-column align-items-center">
         <h1><CountUp  start={100} end={340} duration={1} />+</h1>
         <p>Cups of Coffee</p>
@@ -363,10 +282,11 @@ const Home = () => {
 
      {/* Section 8 */}
 
-     <h1 className='mt-5 quality'>Photos</h1>
-     <h1 className='mt-3 delOne'>Our Food Gallery</h1>
+  <div className="section8">
+  <h1 className='pt-5 quality'>Photos</h1>
+     <h1 className='my-3 delOne'>Our Food Gallery</h1>
 
-     <div className="container mb-5 section8">
+     <div className="container mb-5 ">
      <Swiper slidesPerView={4}
          breakpoints={{
           10: {
@@ -443,10 +363,11 @@ const Home = () => {
       </SwiperSlide>
       </Swiper>
      </div>
+  </div>
 
      {/* Section 9 */}
 
-     <div className="col-xxl-12 px-5 py-5 mt-5 section9">
+     <div className="col-xxl-12 px-5   section9">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6">
             <img  src="https://templates.envytheme.com/handout/default/assets/img/delivery.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width={650} height={450} loading="lazy" />
@@ -468,9 +389,10 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
       {/* Section 10 */}
 
 
-     <div className="container col-xxl-12 px-5 py-5 mt-5  section10">
+     <div className="section10">
+     <div className="container col-xxl-12 px-5 py-5  ">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <h1 className='mt-5 quality'>Testimonial</h1>
+        <h1 className='pt-5 quality'>Testimonial</h1>
      <h1 className='mt-3 delOne'>Our Clients Review</h1>
           <div className="col-10 col-sm-8 col-lg-6 ">
             <img  src="https://templates.envytheme.com/handout/default/assets/img/feedback/image.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width={500} height={400} loading="lazy" />
@@ -478,70 +400,65 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
           <div className="col-lg-6 ">
 
           <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-        <SwiperSlide>
-        <h4 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">David McLean</h4>
+            {productdata.slice(0,4).map((item)=>{
+              if(item){
+                return(
+<SwiperSlide>
+        <h3 className=" fw-bold text-body-emphasis lh-1 mb-3">{item.review_name}</h3>
             <p className=" mt-3 fs-4 text-secondary">CEO, Foodplanet</p>
-            <p className="lead fs-3 text-dark mt-4">I chose Handout because of  their value And <br />incredible   superior customer Service they 
-             really awesome Food with quality service</p>
+            <p className="lead fs-3 text-dark mt-4">{item.review_content}</p>
         </SwiperSlide>
-        <SwiperSlide>
-        <h4 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">David McLean</h4>
-            <p className=" mt-3 fs-4 text-secondary">CEO, Foodplanet</p>
-            <p className="lead fs-3 text-dark mt-4">I chose Handout because of  their value And <br /> incredible  superior customer Service they 
-             really awesome Food with quality service</p>
-        </SwiperSlide>
-        <SwiperSlide>
-        <h4 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">David McLean</h4>
-            <p className=" mt-3 fs-4 text-secondary">CEO, Foodplanet</p>
-            <p className="lead fs-3 text-dark mt-4">I chose Handout because of  their value And <br />incredible  superior customer Service they 
-             really awesome Food with quality service</p>
-        </SwiperSlide>
+                )
+              }
+            })}
+        
        
       </Swiper>
 
           </div>
         </div>
       </div>
+     </div>
 
       {/* Section 11 */}
 
-    <div className="container section11 mb-5 ">
+   <div className="section11 pb-5">
+   <div className="container  pb-5 ">
       
-    <div className="row">
-        <div className="col-sm-6 mb-3 mb-sm-0">
-          <div className="card card1">
-            <div className="text-center " >
-            <div className="burgPrice d-flex flex-column align-items-center justify-content-center mt-3">
-              <p>Burger</p>
-              <h3>$12</h3>
-            </div>
-            </div>
-            <div className="card-body ">
-            <p className="card-text">Pangolin Burger</p>
-             <a href="/product" className='nav-link'> <h1 className="card-title">Festive Special Burger</h1></a>
-              <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+      <div className="row">
+          <div className="col-sm-6 mb-3 mb-sm-0">
+            <div className="card card1">
+              <div className="text-center " >
+              <div className="burgPrice d-flex flex-column align-items-center justify-content-center mt-3">
+                <p>Burger</p>
+                <h3>$12</h3>
+              </div>
+              </div>
+              <div className="card-body ">
+              <p className="card-text">Pangolin Burger</p>
+               <a href="/product" className='nav-link'> <h1 className="card-title">Festive Special Burger</h1></a>
+                <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-sm-6">
-        <div className="card card2">
-            <div className="text-center " >
-            <div className="burgPrice d-flex flex-column align-items-center justify-content-center mt-3">
-              <p>Burger</p>
-              <h3>$45</h3>
-            </div>
-            </div>
-            <div className="card-body ">
-            <p className="card-text">Flat 30% Off</p>
-             <a href="/product" className='nav-link'> <h1 className="card-title">Burger King Special</h1></a>
-              <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+          <div className="col-sm-6">
+          <div className="card card2">
+              <div className="text-center " >
+              <div className="burgPrice d-flex flex-column align-items-center justify-content-center mt-3">
+                <p>Burger</p>
+                <h3>$45</h3>
+              </div>
+              </div>
+              <div className="card-body ">
+              <p className="card-text">Flat 30% Off</p>
+               <a href="/product" className='nav-link'> <h1 className="card-title">Burger King Special</h1></a>
+                <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-   <div className="container section11">
+      <div className="container section11">
    <div className=" row">
    <div className="col-sm-4">
         <div className="card card3">
@@ -590,8 +507,8 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
         </div>
     </div>
    </div>
-      
-   <Footer />
+   </div>
+
     </div>
   )
 }

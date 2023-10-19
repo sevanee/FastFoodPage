@@ -215,7 +215,6 @@ const Checkout = () => {
       </div>
      </div>
 
-     <Footer />
     </>
   )
 }

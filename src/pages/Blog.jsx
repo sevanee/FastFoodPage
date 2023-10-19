@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 const Blog = () => {
   return (
@@ -11,7 +12,11 @@ const Blog = () => {
         
         <h1 className="display-5 fw-bold text-light mt-5">Blog</h1>
         <div className="col-lg-6 mx-auto d-flex justify-content-center">
-          <div className="d-flex align-items-center lead mb-4"><a className='nav-link me-3' href="/">Home</a> <i className="fa-solid fa-mug-hot me-3"></i> <a className='nav-link' href="/about">Blog</a> </div>
+          <div className="d-flex align-items-center lead mb-4">
+            <Link className='nav-link me-3' to="/">Home</Link> 
+            <i className="fa-solid fa-mug-hot me-3"></i>
+             <Link className='nav-link' to="/about">Blog</Link>
+              </div>
         </div>
       </div>
       <div className="below">
@@ -29,7 +34,7 @@ const Blog = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/blog/image1.jpg" className="card-img-top rounded-0" alt="..." />
         <div className="comment d-flex justify-content-between align-items-center ">
             <div className="author d-flex align-items-center">
-            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user1.jpg" class="rounded-circle" alt="..."></img>
+            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user1.jpg" className="rounded-circle" alt="..."></img>
             <p className='authorName ms-2 mt-3'>Adam Smith</p>
             </div>
             <div className="date d-flex align-items-center justify-content-between">
@@ -48,7 +53,7 @@ const Blog = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/blog/image2.jpg" className="card-img-top rounded-0" alt="..." />
         <div className="comment d-flex justify-content-between align-items-center ">
             <div className="author d-flex align-items-center">
-            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user2.jpg" class="rounded-circle" alt="..."></img>
+            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user2.jpg" className="rounded-circle" alt="..."></img>
             <p className='authorName ms-2 mt-3'>Julfikar Don</p>
             </div>
             <div className="date d-flex align-items-center justify-content-between">
@@ -67,11 +72,11 @@ const Blog = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/blog/image3.jpg" className="card-img-top rounded-0" alt="..." />
         <div className="comment d-flex justify-content-between align-items-center ">
             <div className="author d-flex align-items-center">
-            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user3.jpg" class="rounded-circle" alt="..."></img>
+            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user3.jpg" className="rounded-circle" alt="..."></img>
             <p className='authorName ms-2 mt-3'>Adam Smith</p>
             </div>
             <div className="date d-flex align-items-center justify-content-between">
-            <i class="fa-regular fa-calendar-days"></i>
+            <i className="fa-regular fa-calendar-days"></i>
             <p className='day ms-2 mt-3'>2022-23-06</p>
             </div>
         </div>
@@ -86,11 +91,11 @@ const Blog = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/blog/image4.jpg" className="card-img-top rounded-0" alt="..." />
         <div className="comment d-flex justify-content-between align-items-center ">
             <div className="author d-flex align-items-center">
-            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user1.jpg" class="rounded-circle" alt="..."></img>
+            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user1.jpg" className="rounded-circle" alt="..."></img>
             <p className='authorName ms-2 mt-3'>Adam Smith</p>
             </div>
             <div className="date d-flex align-items-center justify-content-between">
-            <i class="fa-regular fa-calendar-days"></i>
+            <i className="fa-regular fa-calendar-days"></i>
             <p className='day ms-2 mt-3'>2022-23-06</p>
             </div>
         </div>
@@ -105,11 +110,11 @@ const Blog = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/blog/image5.jpg" className="card-img-top rounded-0" alt="..." />
         <div className="comment d-flex justify-content-between align-items-center ">
             <div className="author d-flex align-items-center">
-            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user2.jpg" class="rounded-circle" alt="..."></img>
+            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user2.jpg" className="rounded-circle" alt="..."></img>
             <p className='authorName ms-2 mt-3'>Julfikar Don</p>
             </div>
             <div className="date d-flex align-items-center justify-content-between">
-            <i class="fa-regular fa-calendar-days"></i>
+            <i className="fa-regular fa-calendar-days"></i>
             <p className='day ms-2 mt-3'>2022-23-06</p>
             </div>
         </div>
@@ -124,11 +129,11 @@ const Blog = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/blog/image6.jpg" className="card-img-top rounded-0" alt="..." />
         <div className="comment d-flex justify-content-between align-items-center ">
             <div className="author d-flex align-items-center">
-            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user3.jpg" class="rounded-circle" alt="..."></img>
+            <img width={40} src="https://templates.envytheme.com/handout/default/assets/img/user/user3.jpg" className="rounded-circle" alt="..."></img>
             <p className='authorName ms-2 mt-3'>Adam Smith</p>
             </div>
             <div className="date d-flex align-items-center justify-content-between">
-            <i class="fa-regular fa-calendar-days"></i>
+            <i className="fa-regular fa-calendar-days"></i>
             <p className='day ms-2 mt-3'>2022-23-06</p>
             </div>
         </div>
@@ -141,7 +146,6 @@ const Blog = () => {
     
 </div>
 </div>
-<Footer/>
     </>
   )
 }

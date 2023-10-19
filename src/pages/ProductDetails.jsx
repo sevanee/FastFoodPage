@@ -13,12 +13,12 @@ const ProductDetails = () => {
     )}else{
       return (
         <>
-        <div className=" col-xxl-12 px-4 py-5 shop1">
+        <div className=" col-xxl-12 px-4 pb-5 shop1">
             <div className="row flex-lg-row-reverse align-items-center  pb-5">
               
               <div className="col-lg-6">
                 <h2 className=" fw-bold text-body-emphasis lh-1 ">{detailsData.name}</h2>
-                <p className="lead text-dark mt-3">{detailsData.price} <span>$30.00</span></p>
+                <p className="lead text-dark mt-3">${detailsData.price} <span>$30.00</span></p>
                 <p className='lorem'>{detailsData.description}</p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                   <button  className='btn btn-warning rounded-5 text-light mt-2 fw-bold px-4 py-2 addBtn' onClick={()=>addItem(detailsData)}>ADD TO CART</button>
@@ -27,9 +27,6 @@ const ProductDetails = () => {
                   <input className='me-2 checkbox' type="checkbox" name="check" id="" />
                   <label className='lorem mt-3' htmlFor="checkbox">I agree with the terms and conditions</label>
                 </div>
-                <div className='col-lg-6'>
-               <button className='btn  fw-bold buyBtn'>Buy it Now!</button>
-               </div>
                <p className='lorem mt-3'>Guaranteed safe checkout:</p>
                <div className='col-lg-6 d-flex paymentMethods'>
                <a href='/shop' className='nav-link'><i class="fa-brands fa-amazon"></i></a>
