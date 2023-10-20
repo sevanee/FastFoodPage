@@ -1306,6 +1306,9 @@ body{
 }
 
 .singleCard{
+    img{
+        height: 160px !important;
+    }
     .wishButton{
         background-color: none !important;
 
@@ -1331,6 +1334,9 @@ body{
     margin-top: 100px;
 }
 .cartPage{
+    img{
+        height: 50px !important;
+    }
     margin-top: 100px;
     .fa-trash-can{
         cursor: pointer;

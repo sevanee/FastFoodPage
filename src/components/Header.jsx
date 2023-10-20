@@ -56,6 +56,7 @@ const Header = () => {
           lang==='en' ? setLang('az') : setLang('en')
           lang === 'en' ? localStorage.setItem('lang','az') :  localStorage.setItem('lang','en')
         }}>{lang==='en' ? "AZ" : 'EN'}</button>
+        <LinkContainer to='/admin'><button className='btn bg-light border-0 ms-2'><i className="fa-regular fa-user fs-4"></i></button></LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>

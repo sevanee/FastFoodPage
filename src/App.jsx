@@ -1,22 +1,25 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Header from './components/Header'
-import About from './pages/About'
-import ShopList from './pages/ShopList'
-import Cart from './pages/Cart'
-import ProductDetails from './pages/ProductDetails'
-import Checkout from './pages/Checkout'
-import Contact from './pages/Contact'
 import { ProductProvider } from './context/productContext'
 import { ModeContext, ModeProvider } from './context/modeContext'
 import { LangProvider } from './context/langContext'
 import { CartProvider } from 'react-use-cart'
-import Blog from './pages/Blog'
-import Wishlist from './pages/Wishlist'
 import { WishlistProvider } from 'react-use-wishlist'
-import FAQ from './pages/FAQ'
+import Header from './components/Header'
 import Footer from './components/Footer'
+import Home from './pages/client/Home'
+import About from './pages/client/About'
+import ShopList from './pages/client/ShopList'
+import Cart from './pages/client/Cart'
+import Checkout from './pages/client/Checkout'
+import Contact from './pages/client/Contact'
+import Blog from './pages/client/Blog'
+import Wishlist from './pages/client/Wishlist'
+import FAQ from './pages/client/FAQ'
+import ProductDetails from './pages/client/ProductDetails'
+import Dashboard from './pages/admin/Dashboard'
+import AddProduct from './pages/admin/update/AddProduct'
+import EditProduct from './pages/admin/update/EditProduct'
 
 
 const Main = () => {
@@ -34,6 +37,9 @@ const Main = () => {
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/blog' element={<Blog />}></Route>
           <Route path='/wishlist' element={<Wishlist />}></Route>
+          <Route path='/admin' element={<Dashboard />}></Route>
+          <Route path="/admin/add" element={<AddProduct />}></Route>
+          <Route path="/admin/edit/:pe" element={<EditProduct />}></Route>
           <Route path='/faq' element={<FAQ />}></Route>
           <Route path='/product/:url' element={<ProductDetails />}></Route>
         </Routes>
