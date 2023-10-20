@@ -1,8 +1,11 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { useCart } from 'react-use-cart';
+import { useWishlist } from 'react-use-wishlist';
 import { ProductContext } from '../../context/productContext';
+import { Button } from 'react-bootstrap';
 const ProductDetails = () => {
+  const { addWishlistItem ,getWishlistItem ,removeWishlistItem} = useWishlist();
   const {url} = useParams();
   const { addItem } = useCart();
   const [product] = useContext(ProductContext);
@@ -22,6 +25,11 @@ const ProductDetails = () => {
                 <p className='lorem'>{detailsData.description}</p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                   <button  className='btn btn-warning rounded-5 text-light mt-2 fw-bold px-4 py-2 addBtn' onClick={()=>addItem(detailsData)}>ADD TO CART</button>
+                  <Button className='btn btn-light wishButton ' onClick={()=>{if(getWishlistItem(detailsData.id)!==undefined){
+            removeWishlistItem(detailsData.id);
+          }else{
+            addWishlistItem(detailsData);
+          }}}><i className="fa-solid fa-heart text-danger"></i></Button>
                 </div>
                 <div className="agree mt-3 d-flex align-items-center">
                   <input className='me-2 checkbox' type="checkbox" name="check" id="" />
@@ -44,13 +52,29 @@ const ProductDetails = () => {
             </div>
             <div className='col-xxl-12'>
             <div className="additional col-lg-6 mx-5 mt-3">
-              <button className='btn fw-bold' >DESCRIPTION</button>
-              <button className='btn fw-bold'>ADDITIONAL INFORMATION</button>
+            <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button className="accordion-button btn btn-warning text-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              REVIEWS
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
+            <div className="accordion-body">
+              <strong>{detailsData.review_name}:</strong> {detailsData.review_content}
             </div>
-            <div className="description col-xxl-10 mx-5 px-4 py-4 ">
-              <p className='lorem'>{detailsData.description}</p>
+          </div>
+        </div>
+      
             </div>
-            <div className="description col-xxl-10 mx-5 px-4 py-4 ">
+            <div className=" accordion-item col-lg-6 mx-5 px-4 py-4 ">
+          <h2 className="accordion-header">
+            <button className="accordion-button btn btn-warning text-center p-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+              DESCRIPTION
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse show">
+            <div className="accordion-body">
+            <div className="description ">
               <ul>
                 <li><span>Brand:</span> ThemeForest</li>
                 <li><span>Color:</span> {detailsData.color}</li>
@@ -58,6 +82,9 @@ const ProductDetails = () => {
                 <li><span>Weight:</span>  {detailsData.weight}</li>
               </ul>
             </div>
+            </div>
+          </div>
+        </div>
             </div>
             
           </div>

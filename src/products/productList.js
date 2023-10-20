@@ -76,7 +76,9 @@ const datas = [
     weight: '200gr',
     team_image:'https://templates.envytheme.com/handout/default/assets/img/team/1.png',
     team_name:'Arnold Russel',
-    team_pos:'Chief Instructor'
+    team_pos:'Chief Instructor',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:6,
@@ -88,7 +90,8 @@ const datas = [
     color: 'Yellow',
     size: 'Medium',
     weight: '220gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:7,
@@ -100,7 +103,8 @@ const datas = [
     color: 'Orange',
     size: 'Small',
     weight: '200gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:8,
@@ -112,7 +116,8 @@ const datas = [
     color: 'Orange',
     size: 'Medium',
     weight: '230gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:9,
@@ -124,7 +129,8 @@ const datas = [
     color: 'Orange',
     size: 'Large',
     weight: '260gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:10,
@@ -136,7 +142,8 @@ const datas = [
     color: 'Orange',
     size: 'Standard',
     weight: '300gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:11,
@@ -148,7 +155,8 @@ const datas = [
     color: 'Yellow',
     size: 'Small',
     weight: '200gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:12,
@@ -160,7 +168,8 @@ const datas = [
     color: 'Yellow',
     size: 'Medium',
     weight: '240gr',
-    
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:13,
@@ -171,7 +180,9 @@ const datas = [
     price: 2,
     color: 'Black',
     size: 'Small',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:14,
@@ -182,7 +193,9 @@ const datas = [
     price: 3,
     color: 'Black',
     size: 'Medium',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:15,
@@ -193,7 +206,9 @@ const datas = [
     price: 4,
     color: 'Black',
     size: 'Large',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:16,
@@ -204,7 +219,9 @@ const datas = [
     price: 2,
     color: 'Orange',
     size: 'Small',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:17,
@@ -215,7 +232,9 @@ const datas = [
     price: 3,
     color: 'Orange',
     size: 'Medium',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:18,
@@ -226,7 +245,9 @@ const datas = [
     price: 4,
     color: 'Orange',
     size: 'Large',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:19,
@@ -237,7 +258,9 @@ const datas = [
     price: 2,
     color: 'Transparent',
     size: 'Small',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:20,
@@ -248,7 +271,9 @@ const datas = [
     price: 3,
     color: 'Transparent',
     size: 'Small',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:21,
@@ -259,7 +284,9 @@ const datas = [
     price: 4,
     color: 'Transparent',
     size: 'Small',
-    weight:'none'
+    weight:'none',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:22,
@@ -270,7 +297,9 @@ const datas = [
     price: 1,
     color: 'Colored',
     size: 'Standard',
-    weight:'94gr'
+    weight:'94gr',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:23,
@@ -281,7 +310,9 @@ const datas = [
     price: 5,
     color: 'Brown',
     size: 'Standard',
-    weight:'300ml'
+    weight:'300ml',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:24,
@@ -292,7 +323,9 @@ const datas = [
     price: 3,
     color: 'Brown',
     size: 'Standard',
-    weight:'100ml'
+    weight:'100ml',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:25,
@@ -303,7 +336,9 @@ const datas = [
     price: 6,
     color: 'Brown',
     size: 'Standard',
-    weight:'300ml'
+    weight:'300ml',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:26,
@@ -314,7 +349,9 @@ const datas = [
     price: 2,
     color: 'Black',
     size: 'Standard',
-    weight:'300ml'
+    weight:'300ml',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:27,
@@ -325,7 +362,9 @@ const datas = [
     price: 6,
     color: 'Yellow',
     size: 'Small',
-    weight:'70gr'
+    weight:'70gr',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:28,
@@ -336,7 +375,9 @@ const datas = [
     price: 7,
     color: 'Yellow',
     size: 'Medium',
-    weight:'120gr'
+    weight:'120gr',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:29,
@@ -347,7 +388,9 @@ const datas = [
     price: 8,
     color: 'Yellow',
     size: 'Large',
-    weight:'200gr'
+    weight:'200gr',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:30,
@@ -358,7 +401,9 @@ const datas = [
     price: 3,
     color: 'Brown',
     size: 'Small',
-    weight:'80gr'
+    weight:'80gr',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   },
   {
       id:31,
@@ -369,7 +414,9 @@ const datas = [
     price: 4,
     color: 'Brown',
     size: 'Medium',
-    weight:'130gr'
+    weight:'130gr',
+    review_name:'Minnesota Twins',
+    review_content:'The combination of the special sauce, two beef patties, lettuce, cheese, pickles, and onions is pure fast-food perfection.'
   }
 
 ]

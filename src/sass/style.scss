@@ -248,9 +248,10 @@
     100%{padding: 30px;}
    }
 
-.pricess{
-    height: 300px;
+   .pricess{
+    height: auto;
     background-color: #fbb403;
+    padding: 5vh 0;
     .cups{
         h1{
             margin-bottom: 5px;
@@ -270,6 +271,14 @@
             font-weight: 550;
             font-size: 20px;
             font-family: "Poppins", sans-serif;
+        }
+        @media (max-width:900px) {
+            h1{
+                font-size: 30px;
+            }
+            p{
+                font-size: 15px;
+            }
         }
     }
 }
@@ -1408,7 +1417,8 @@ body{
     }
   }
   .searchForm{
-    z-index: 900;
+    margin-top: 30px;
+    z-index: 99;
   }
   .orders{
     position: relative;
