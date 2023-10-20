@@ -1,19 +1,19 @@
 import React from 'react'
 import { Button, Container, Table } from 'react-bootstrap'
-// import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import { removeProduct } from '../../manager/actions/Action'
 import { Link } from 'react-router-dom'
 import slugify from 'slugify'
 
 const Dashboard = () => {
-//   const productdata =useSelector(p=>p)
-//   const dispatch =useDispatch()
+  const productdata =useSelector(p=>p)
+  const dispatch =useDispatch()
   return (
     <div>
       <h1 className='text-center my-5'>Admin Panel</h1>
       <Container>
-        <LinkContainer to="add"><Button className='mb-3'>Add</Button></LinkContainer>
+        <LinkContainer to="add"><Button className='mb-3 btn-warning fw-bold'>Add</Button></LinkContainer>
       <Table striped bordered hover>
       <thead>
         <tr>

@@ -1,4 +1,4 @@
-export const newReducer=(state= [],action)=>{
+export const Reducer=(state= [],action)=>{
     switch (action.type) {
       case 'Add_Product':
         return [...state,action.value];
