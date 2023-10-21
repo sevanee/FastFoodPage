@@ -633,6 +633,7 @@
         border: none !important;
     }
     .burgerCard1{
+        padding-bottom: 10px;
         border: none !important;
         background-color: #f7f7f7;
         transition-duration: 0.5s;
@@ -1179,6 +1180,34 @@ body{
 
 
 .dark{
+    .about5{
+        background-color: #1d1d1d ;
+        h3{
+            color: white !important;
+        }
+        .lead{
+            color: white !important;
+        }
+    }
+  .about4{
+    background-color: #1d1d1d;
+  }
+    .aboutSection3{
+        background-color: #000000 !important;
+        .burgerCard1{
+            background-color: #1d1d1d !important;
+            .title{
+                color: white !important;
+            }
+        }
+    }
+    .hero2{
+        background-color: #000000 !important;
+        color: white !important;
+        .title1{
+            color: white !important;
+        }
+    }
     .section11{
         background-color: #000000;
     }
@@ -1229,6 +1258,14 @@ body{
         background-color: #000000 !important;
     } 
    .navbar{
+    .navbar-toggler{
+        background-color: white !important;
+        color: black !important;
+    }
+    .adminBtn{
+        background-color: #1d1d1d !important;
+        color: white !important;
+    }
     .dropdown1{
         background-color: #1d1d1d;
         color: white;
@@ -1332,13 +1369,13 @@ body{
         cursor: pointer;
     }
 }
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-}
+// .navbar{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     z-index: 99;
+// }
 .contactPage{
     margin-top: 100px;
 }

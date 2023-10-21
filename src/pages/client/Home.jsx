@@ -106,7 +106,7 @@ const Home = () => {
 
       {/* Section 3 */}
 
-      <div className='section3 col-12 d-flex  align-items-center  commonBox'>
+      {/* <div className='section3 col-12 d-flex  align-items-center  commonBox'>
       <img className='background-img' src="https://templates.envytheme.com/handout/default/assets/img/others-bg.jpg" alt="" />
             <div className="cards-box">
             <div className='left d-flex  col-lg-5 col-sm-2'>
@@ -173,7 +173,7 @@ const Home = () => {
                 
             </div>
             </div>
-        </div>
+        </div> */}
         
      {/* Section 4 */}
 

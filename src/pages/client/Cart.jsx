@@ -19,90 +19,102 @@ const Cart = () => {
     alert('Invalid coupon code. Please try again.')
    }
   };
-  return (
-    <>
-      <div className="container cartPage">
-
-        <table className="table cartTable">
-          <thead>
-            <tr>
-              <th scope="col">PRODUCT</th>
-              <th scope="col">NAME</th>
-              <th scope="col">UNIT PRICE</th>
-              <th scope="col">QUANTITY</th>
-              <th scope="col">TOTAL</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            {items.map(item => (
+  if(localStorage.getItem('user')){
+    return (
+      <>
+        <div className="container cartPage">
+  
+          <table className="table cartTable">
+            <thead>
               <tr>
-                <th scope="row"><img width={90} src={item.image} alt="" /></th>
-                <td className='name'>{item.name}</td>
-                <td>${item.price}</td>
-                <td>
-                 
-                  <div className="countBtn">
-                    <button className='btn decreaseBtn' onClick={()=>{
-                      if(item.quantity>1)
-                      updateItemQuantity(item.id , item.quantity - 1)
-                    }}>-</button>
-                    <span className='mx-2'>{item.quantity}</span>
-                    <button className='btn increaseBtn' onClick={()=>{
-                      updateItemQuantity(item.id , item.quantity + 1)
-                    }}>+</button>
-                  </div>
-                </td>
-                <td>${item.itemTotal}</td>
-                <td><i  className="fa-regular fa-trash-can text-warning" onClick={()=> removeItem(item.id) }></i></td>
-                   
+                <th scope="col">PRODUCT</th>
+                <th scope="col">NAME</th>
+                <th scope="col">UNIT PRICE</th>
+                <th scope="col">QUANTITY</th>
+                <th scope="col">TOTAL</th>
+                <th scope="col"></th>
               </tr>
-            ))}
-
-          </tbody>
-        </table>
-        <div >
-          <div className="col-lg-12 d-flex align-items-center my-4 ms-5 justify-content-center">
-            <div className="col-lg-6 col-md-7 col-sm-6">
-              <form onSubmit={applyCoupon}>
-              <div >
-                <input placeholder='Coupon code' type="text" className='coupon px-5 py-3 mt-2 border border-warning' value={coupon} onChange={appplyCouponCode}/>
-                <button className='btn btn-warning text-light fw-bold rounded-0 py-3 px-3 mb-1 applyBtn' >APPLY COUPON</button>
+            </thead>
+            <tbody>
+              {items.map(item => (
+                <tr>
+                  <th scope="row"><img width={90} src={item.image} alt="" /></th>
+                  <td className='name'>{item.name}</td>
+                  <td>${item.price}</td>
+                  <td>
+                   
+                    <div className="countBtn">
+                      <button className='btn decreaseBtn' onClick={()=>{
+                        if(item.quantity>1)
+                        updateItemQuantity(item.id , item.quantity - 1)
+                      }}>-</button>
+                      <span className='mx-2'>{item.quantity}</span>
+                      <button className='btn increaseBtn' onClick={()=>{
+                        updateItemQuantity(item.id , item.quantity + 1)
+                      }}>+</button>
+                    </div>
+                  </td>
+                  <td>${item.itemTotal}</td>
+                  <td><i  className="fa-regular fa-trash-can text-warning" onClick={()=> removeItem(item.id) }></i></td>
+                     
+                </tr>
+              ))}
+  
+            </tbody>
+          </table>
+          <div >
+            <div className="col-lg-12 d-flex align-items-center my-4 ms-5 justify-content-center">
+              <div className="col-lg-6 col-md-7 col-sm-6">
+                <form onSubmit={applyCoupon}>
+                <div >
+                  <input placeholder='Coupon code' type="text" className='coupon px-5 py-3 mt-2 border border-warning' value={coupon} onChange={appplyCouponCode}/>
+                  <button className='btn btn-warning text-light fw-bold rounded-0 py-3 px-3 mb-1 applyBtn' >APPLY COUPON</button>
+                </div>
+                </form>
+                
               </div>
-              </form>
-              
+            </div>
+          </div>
+  
+          <div className="col-lg-12 totalCart">
+            <div className="col-lg-5 col-md-3 cartTotals my-5">
+              <h3 className='fw-bold mb-4'>Cart Totals</h3>
+              <table className='table border '>
+                <tbody>
+                  <tr>
+                    <th >Total</th>
+                    <td className='name'>${cartTotal}</td>
+                  </tr>
+                  <tr>
+                    <th>Shipping</th>
+                    <td className='name'>$30.00</td>
+                  </tr>
+                  <tr>
+                    <th>Discounted Total</th>
+                    <td className='name'>${appliedCoupon}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <LinkContainer to='/checkout'>
+                <button className='btn btn-warning  fw-bold  py-3 px-5 rounded-5 updateBtn mt-2'>PROCEED TO CHECKOUT</button>
+              </LinkContainer>
             </div>
           </div>
         </div>
+  
+      </>
+    )
 
-        <div className="col-lg-12 totalCart">
-          <div className="col-lg-5 col-md-3 cartTotals my-5">
-            <h3 className='fw-bold mb-4'>Cart Totals</h3>
-            <table className='table border '>
-              <tbody>
-                <tr>
-                  <th >Total</th>
-                  <td className='name'>${cartTotal}</td>
-                </tr>
-                <tr>
-                  <th>Shipping</th>
-                  <td className='name'>$30.00</td>
-                </tr>
-                <tr>
-                  <th>Discounted Total</th>
-                  <td className='name'>${appliedCoupon}</td>
-                </tr>
-              </tbody>
-            </table>
-            <LinkContainer to='/checkout'>
-              <button className='btn btn-warning  fw-bold  py-3 px-5 rounded-5 updateBtn mt-2'>PROCEED TO CHECKOUT</button>
-            </LinkContainer>
-          </div>
-        </div>
+  }else{
+    return(
+      <div className="container d-flex align-items-center justify-content-center">
+<LinkContainer to='/authorization'><h2 className='mt-5 py-5 btn  text-danger fs-1 fw-bold p-2'>Sign In</h2></LinkContainer>
       </div>
+      
+      
 
-    </>
-  )
+    )
+  }
 }
 
 export default Cart

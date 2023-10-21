@@ -20,6 +20,9 @@ import ProductDetails from './pages/client/ProductDetails'
 import Dashboard from './pages/admin/Dashboard'
 import AddProduct from './pages/admin/update/AddProduct'
 import EditProduct from './pages/admin/update/EditProduct'
+import AuthorizationPage from './pages/AuthorizationPage'
+import Thanks from './pages/client/Thanks'
+import NotFoundPage from './pages/client/NotFoundPage'
 
 
 const Main = () => {
@@ -41,7 +44,10 @@ const Main = () => {
           <Route path="/admin/add" element={<AddProduct />}></Route>
           <Route path="/admin/edit/:pe" element={<EditProduct />}></Route>
           <Route path='/faq' element={<FAQ />}></Route>
+          <Route path='/thank' element={<Thanks />}></Route>
+          <Route path='/authorization' element={<AuthorizationPage />}></Route>
           <Route path='/product/:url' element={<ProductDetails />}></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
         <Footer />
         </ProductProvider>

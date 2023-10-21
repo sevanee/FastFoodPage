@@ -1,7 +1,9 @@
+import { v4 as uuid} from 'uuid'
+
 export const addProduct=({id,title,desc,img})=>({
     type:"Add_Product",
     value:{
-      id:id,
+      id:uuid(),
       title:title,
       desc:desc,
       img:img

@@ -1,4 +1,5 @@
 import React from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
 import { Link } from 'react-router-dom'
 
 const FAQ = () => {
@@ -138,10 +139,9 @@ const FAQ = () => {
                     </div>
                   </div>   
                   <div className="col-lg-12 col-md-12 py-5">
-                    <button type="submit" className=" orderBtn fw-bold " style={{pointerEvents: 'all', cursor: 'pointer'}}>
+                    <LinkContainer to='/thank'><button type="submit" className=" orderBtn fw-bold "  style={{pointerEvents: 'all', cursor: 'pointer'}}>
                       SEND MESSAGE
-                      <span />
-                    </button>
+                    </button></LinkContainer>
                   </div>
                 </div>
               </form>

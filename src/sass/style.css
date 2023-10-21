@@ -691,6 +691,7 @@
   border: none !important;
 }
 .hero3 .burgerCard1 {
+  padding-bottom: 10px;
   border: none !important;
   background-color: #f7f7f7;
   transition-duration: 0.5s;
@@ -1212,6 +1213,34 @@ body {
   color: white !important;
 }
 
+.dark .about5 {
+  background-color: #1d1d1d;
+}
+.dark .about5 h3 {
+  color: white !important;
+}
+.dark .about5 .lead {
+  color: white !important;
+}
+.dark .about4 {
+  background-color: #1d1d1d;
+}
+.dark .aboutSection3 {
+  background-color: #000000 !important;
+}
+.dark .aboutSection3 .burgerCard1 {
+  background-color: #1d1d1d !important;
+}
+.dark .aboutSection3 .burgerCard1 .title {
+  color: white !important;
+}
+.dark .hero2 {
+  background-color: #000000 !important;
+  color: white !important;
+}
+.dark .hero2 .title1 {
+  color: white !important;
+}
 .dark .section11 {
   background-color: #000000;
 }
@@ -1261,6 +1290,14 @@ body {
 }
 .dark .navbar {
   background-color: black !important;
+}
+.dark .navbar .navbar-toggler {
+  background-color: white !important;
+  color: black !important;
+}
+.dark .navbar .adminBtn {
+  background-color: #1d1d1d !important;
+  color: white !important;
 }
 .dark .navbar .dropdown1 {
   background-color: #1d1d1d;
@@ -1352,14 +1389,6 @@ body {
 }
 .wishlist .fa-cart-shopping {
   cursor: pointer;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
 }
 
 .contactPage {

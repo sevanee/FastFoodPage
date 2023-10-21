@@ -34,8 +34,8 @@ const About = () => {
 {/* Section 2 */}
 
 
-<div className=" hero2 col-xxl-11  py-5 mb-5">
-        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+<div className=" hero2 col-xxl-11  py-5 ">
+        <div className="row flex-lg-row-reverse align-items-center  py-5">
           <div className="col-10 col-sm-8 col-lg-6">
             <img  src="https://templates.envytheme.com/handout/default/assets/img/about/image1.jpg" className="d-block mx-lg-auto img-fluid brg-image" alt="Bootstrap Themes" width={700} height={500} loading="lazy" />
           </div>
@@ -73,8 +73,9 @@ Eusmod tempor incididunt labore et dolore magna aliqua. Quis ipsum suspendisse u
 
      {/* Section 3 */}
 
-     <h1 className='mt-5 quality'>Our Team</h1>
-     <h1 className='mt-3 delOne'>Our Experience Team</h1>
+    <div className="aboutSection3 pb-3">
+    <h1 className='pt-5 quality'>Our Team</h1>
+     <h1 className='pt-3 delOne'>Our Experience Team</h1>
 
      <Container className='hero3'>
      <Swiper slidesPerView={4}
@@ -122,6 +123,7 @@ Eusmod tempor incididunt labore et dolore magna aliqua. Quis ipsum suspendisse u
             
       </Swiper>
      </Container>
+    </div>
 
      {/* Section 4 */}
 
@@ -143,7 +145,7 @@ Eusmod tempor incididunt labore et dolore magna aliqua. Quis ipsum suspendisse u
 
       {/* Section 5 */}
 
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper about5 mb-5">
+      <Swiper pagination={true} modules={[Pagination]} className="mySwiper about5 pb-5">
         {productdata.slice(0,4).map((item)=>{
           if(item){
             return(
