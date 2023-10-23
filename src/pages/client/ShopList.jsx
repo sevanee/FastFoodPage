@@ -2,10 +2,12 @@ import React, { useContext, useEffect } from "react";
 import SingleCard from "../../components/SingleCard";
 import { useState } from "react";
 import { ProductContext } from "../../context/productContext";
+import { LangContext } from '../../context/langContext';
 
 const ShopList = () => {
   const [productdata] = useContext(ProductContext);
   const [catData, setCatData] = useState(productdata);
+  const  [lang] = useContext(LangContext);
   const [query, setQuery] = useState(null);
   const [searchvalue, setSearchvalue] = useState(null);
 
@@ -29,8 +31,9 @@ const ShopList = () => {
 
   return (
     <>
-      <div className=" col">
-        <div className="searchForm col-lg-4 mx-auto">
+     <div className="shopPage ">
+     <div className=" col pt-4 searchForm ">
+        <div className=" col-lg-4 mx-auto ">
           <form onSubmit={searchSubmited}>
             <div className="input-group mb-3">
               <input
@@ -46,7 +49,7 @@ const ShopList = () => {
                 type="submit"
                 id="button-addon2"
               >
-                Search
+                {lang==='en' ? 'Search' : 'Axtar'}
               </button>
             </div>
           </form>
@@ -71,7 +74,7 @@ const ShopList = () => {
       </div>
 
       <div className="mt-5 container shopList row">
-        <div className="col-sm col-md-2 ">
+        <div className="col-12 col-sm-12 col-lg-2">
           <ul className="list-group border border-warning fw-bold">
             <li
               className="list-group-item border border-warning"
@@ -87,7 +90,7 @@ const ShopList = () => {
                 filterResult("Chicken Pcs");
               }}
             >
-              Chicken Pieces
+              {lang==='en' ? 'Chicken Pieces' : 'Toyuq Hissələri'}
             </li>
             <li
               className="list-group-item border border-warning"
@@ -95,7 +98,7 @@ const ShopList = () => {
                 filterResult("Snack");
               }}
             >
-              Snack
+              {lang==='en' ? 'Snack' : 'Qəlyənaltı'}
             </li>
             <li
               className="list-group-item border border-warning"
@@ -103,7 +106,7 @@ const ShopList = () => {
                 filterResult("Wedges");
               }}
             >
-              Wedges
+              {lang==='en' ? 'Wedges' : 'Kənd Kartofu'}
             </li>
             <li
               className="list-group-item border border-warning"
@@ -111,7 +114,7 @@ const ShopList = () => {
                 filterResult("Beverage");
               }}
             >
-              Beverage
+              {lang==='en' ? 'Beverage' : 'İçki'}
             </li>
             <li
               className="list-group-item border border-warning"
@@ -119,7 +122,7 @@ const ShopList = () => {
                 filterResult("Coffee");
               }}
             >
-              Coffee
+              {lang==='en' ? 'Coffee' : 'Kofe'}
             </li>
             <li
               className="list-group-item border border-warning"
@@ -127,7 +130,7 @@ const ShopList = () => {
                 filterResult("Tea");
               }}
             >
-              Tea
+              {lang==='en' ? 'Tea' : 'Çay'}
             </li>
           </ul>
 
@@ -153,8 +156,8 @@ const ShopList = () => {
           </button>
         </div>
 
-        <div className="col-lg-10 col-sm-12">
-          <div className="row ms-5">
+        <div className="col-12 col-sm-12 col-lg-10">
+          <div className="row g-5">
             {catData.length === 0 ? (
               <img
                 src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif"
@@ -166,6 +169,7 @@ const ShopList = () => {
           </div>
         </div>
       </div>
+     </div>
     </>
   );
 };

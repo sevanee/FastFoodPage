@@ -188,6 +188,7 @@
     transition-duration: 1s;
     &:hover{
         background-color: #f3e6c4;
+    
         .imgCard{
         transition-duration: 1s;
             background-color: #fbb403 !important;
@@ -770,7 +771,7 @@
     font-family: "Poppins", sans-serif !important;
     font-size: 18px;
         }
-            margin-top: 130px;
+    
     
     }
     .dropdown1{
@@ -1122,6 +1123,10 @@ body{
 }
 
 .light{
+    .adminBtn{
+        background-color: white !important;
+        color: black !important;
+    }
     .orders{
         background-color:#f8f9fa !important;
     } 
@@ -1180,6 +1185,110 @@ body{
 
 
 .dark{
+    .wishlist{
+        background-color: #0e0e0e;
+    }
+    .contactPage{
+        background-color: #000000;
+        .box1{
+            background-color: #1d1d1d;
+        }
+        .contact2{
+            background-color: #1d1d1d;
+            h2{
+                color: white;
+            }
+            input{
+                background-color: #d2d2d2;
+                border: none;
+            }
+            textarea{
+                background-color: #d2d2d2;
+                border: none;
+            }
+        }
+    }
+    .commonBlog{
+        background-color: #000000;
+        .blogSection{
+            .title1{
+                color: white !important;
+            }
+        }
+        .card{
+            background-color: #1d1d1d;
+            .card-title{
+                color: white;
+            }
+        }
+    }
+    .faq-contact{
+        h2{
+            color: white;
+        }
+    }
+    .faq{
+        
+        background-color: #000000;
+        .frequent{
+            color: white;
+        }
+    }
+    .check{
+        background-color: #1d1d1d;
+        .title{
+            color: white !important;
+        }
+        label{
+            color: white !important;
+        }
+        hr{
+            color: white;
+        }
+
+    }
+    .cartPage{
+        background-color: #000000;
+    }
+    .editPage{
+        background-color: #0e0e0e;
+        h1{
+            color: white;
+        }
+    }
+    .addPage{
+        background-color: #0e0e0e;
+        h1{
+            color: white;
+        }
+    }
+    .adminPanel{
+        background-color: #0e0e0e;
+        h1{
+            color: white;
+        }
+    
+    }
+    .authorization{
+        background-color: #0e0e0e;
+    }
+    .shopPage{
+        background-color: #000000;
+    }
+    .singleCard{
+        p{
+            color: white !important;
+        }
+        .card-title{
+            color: white !important;
+        }
+        .card-body{
+            background-color: #1d1d1d;
+        }
+    }
+    .user-info-box{
+        background-color:  #fbb403 !important;
+    }
     .about5{
         background-color: #1d1d1d ;
         h3{
@@ -1352,6 +1461,7 @@ body{
 }
 
 .singleCard{
+    
     img{
         height: 160px !important;
     }
@@ -1374,16 +1484,12 @@ body{
 //     top: 0;
 //     left: 0;
 //     width: 100%;
-//     z-index: 99;
 // }
-.contactPage{
-    margin-top: 100px;
-}
+
 .cartPage{
     img{
         height: 50px !important;
     }
-    margin-top: 100px;
     .fa-trash-can{
         cursor: pointer;
     }
@@ -1453,10 +1559,7 @@ body{
         border-radius: 0;
     }
   }
-  .searchForm{
-    margin-top: 30px;
-    z-index: 99;
-  }
+ 
   .orders{
     position: relative;
     .burger-video{
@@ -1471,6 +1574,105 @@ body{
             width: 90%;
             height: 80%;
             z-index: 3;
+        }
+        
+    }
+}
+.adminBtn{
+    border: none !important;
+    background-color: #1d1d1d;
+    border-radius: 20px;
+    width: 70px;
+    height: 35px;
+    color: white !important;
+    font-weight: bold;
+}
+.user-info-box{
+    border: none !important;
+    border-radius: 30px;
+    width: 70px;
+    height: 35px;
+    font-weight: bold;
+}
+.custom-alert-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transition: 1s;
+    transform: translateY(-100%);
+    z-index: 200;
+    .main-box{
+        width: 60%;
+        background-color: orange ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+        .img-box{
+            width: 10%;
+            img{
+                width: 100%;
+            }
+        }
+        .text-box{
+            width: 80%;
+            p{
+                margin: 0;
+                padding: 0;
+                font-size: 30px;
+                font-family: sans-serif;
+                color: #fff;
+            }
+        }
+        @media (max-width: 768px) {
+           
+            p{
+                font-size: 13px;
+            }
+           
+         }
+        #closeBtn{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        .main-box{
+            width: 90%;
+        }
+     }
+}
+
+.alert-active{
+    transform: translateY(10%);
+}
+// .commonBtn{
+//     position: relative;
+//     .visually-hidden{
+//         position: absolute;
+//         top: -10px;
+//         right: 10px;
+//     }
+// }
+.cartBtn{
+    width: 40px;
+    height: 30px;
+}
+.signup-area{
+    background-color: #f8f9fa;
+   form{
+        background-color: white;
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+        h3{
+            color: #1d1d1d;
+            font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700 !important;
         }
     }
 }

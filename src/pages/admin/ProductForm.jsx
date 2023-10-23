@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
+import { LangContext } from '../../context/langContext';
+
 
 const ProductForm = ({sendValue,editProduct}) => {
   const [title, setTitle] = useState(editProduct? editProduct.title : "" );
   const [photo, setPhoto] = useState(editProduct? editProduct.img : "");
   const [description, setDescription] = useState(editProduct? editProduct.desc : "");
+  const  [lang] = useContext(LangContext);
 
   const productSubmited = (event) => {
     event.preventDefault();
@@ -19,7 +22,7 @@ const ProductForm = ({sendValue,editProduct}) => {
   return (
     <Form onSubmit={productSubmited}>
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Enter Title</Form.Label>
+        <Form.Label>{lang==='en' ? 'Enter Title' : 'Başlığı Daxil Edin'}</Form.Label>
         <Form.Control
           value={title}
           onChange={(e) => {
@@ -31,7 +34,7 @@ const ProductForm = ({sendValue,editProduct}) => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Enter Photo</Form.Label>
+        <Form.Label>{lang==='en' ? 'Enter Photo' : 'Şəkili Daxil Edin'}</Form.Label>
         <Form.Control
           value={photo}
           onChange={(e) => {
@@ -54,7 +57,7 @@ const ProductForm = ({sendValue,editProduct}) => {
         />
       </FloatingLabel>
       <Button className="mt-3" variant="primary" type="submit">
-        Submit
+      {lang==='en' ? 'Submit' : 'Göndər'}
       </Button>
     </Form>
   );

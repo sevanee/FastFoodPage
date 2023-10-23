@@ -2,10 +2,12 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { useCart } from 'react-use-cart';
 import { useWishlist } from 'react-use-wishlist';
+import { LangContext } from '../../context/langContext';
 import { ProductContext } from '../../context/productContext';
 import { Button } from 'react-bootstrap';
 const ProductDetails = () => {
   const { addWishlistItem ,getWishlistItem ,removeWishlistItem} = useWishlist();
+  const  [lang] = useContext(LangContext);
   const {url} = useParams();
   const { addItem } = useCart();
   const [product] = useContext(ProductContext);
@@ -24,18 +26,14 @@ const ProductDetails = () => {
                 <p className="lead text-dark mt-3">${detailsData.price} <span>$30.00</span></p>
                 <p className='lorem'>{detailsData.description}</p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button  className='btn btn-warning rounded-5 text-light mt-2 fw-bold px-4 py-2 addBtn' onClick={()=>addItem(detailsData)}>ADD TO CART</button>
+                  <button  className='btn btn-warning rounded-5 text-light mt-2 fw-bold px-4 py-2 addBtn' onClick={()=>addItem(detailsData)}>{lang==='en' ? 'ADD TO CART' : 'Səbətə Əlavə Et'}</button>
                   <Button className='btn btn-light wishButton ' onClick={()=>{if(getWishlistItem(detailsData.id)!==undefined){
             removeWishlistItem(detailsData.id);
           }else{
             addWishlistItem(detailsData);
           }}}><i className="fa-solid fa-heart text-danger"></i></Button>
                 </div>
-                <div className="agree mt-3 d-flex align-items-center">
-                  <input className='me-2 checkbox' type="checkbox" name="check" id="" />
-                  <label className='lorem mt-3' htmlFor="checkbox">I agree with the terms and conditions</label>
-                </div>
-               <p className='lorem mt-3'>Guaranteed safe checkout:</p>
+               <p className='lorem mt-3'>{lang==='en' ? 'Guaranteed safe checkout:' : 'Zəmanətli təhlükəsiz ödəniş:'}</p>
                <div className='col-lg-6 d-flex paymentMethods'>
                <a href='/shop' className='nav-link'><i class="fa-brands fa-amazon"></i></a>
                <a href='/shop' className='nav-link'><i class="fa-brands fa-cc-visa"></i></a>
@@ -55,7 +53,7 @@ const ProductDetails = () => {
             <div className="accordion-item">
           <h2 className="accordion-header">
             <button className="accordion-button btn btn-warning text-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              REVIEWS
+            {lang==='en' ? 'REVIEWS' : 'ŞƏRHLƏR'}
             </button>
           </h2>
           <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
@@ -69,17 +67,17 @@ const ProductDetails = () => {
             <div className=" accordion-item col-lg-6 mx-5 px-4 py-4 ">
           <h2 className="accordion-header">
             <button className="accordion-button btn btn-warning text-center p-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-              DESCRIPTION
+            {lang==='en' ? 'DESCRIPTION' : 'TƏSVİRİ'}
             </button>
           </h2>
           <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse show">
             <div className="accordion-body">
             <div className="description ">
               <ul>
-                <li><span>Brand:</span> ThemeForest</li>
-                <li><span>Color:</span> {detailsData.color}</li>
-                <li><span>Size:</span>  {detailsData.size}</li>
-                <li><span>Weight:</span>  {detailsData.weight}</li>
+                <li><span>{lang==='en' ? 'Brand:' : 'Marka:'}</span> ThemeForest</li>
+                <li><span>{lang==='en' ? 'Color:' : 'Rəng:'}</span> {detailsData.color}</li>
+                <li><span>{lang==='en' ? 'Size:' : 'Ölçü:'}</span>  {detailsData.size}</li>
+                <li><span>{lang==='en' ? 'Weight:' : 'Çəki:'}</span>  {detailsData.weight}</li>
               </ul>
             </div>
             </div>

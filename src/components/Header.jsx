@@ -26,7 +26,7 @@ const Header = () => {
   }
 
   return (
-    <Navbar expand="lg" className="bg-body-light navbar mb-5">
+    <Navbar expand="lg" className="bg-body-light navbar">
       <Container>
         <Navbar.Brand className='brand' href="/">Handout</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -54,7 +54,7 @@ const Header = () => {
           <Nav className="ms-auto">
             <LinkContainer to='/wishlist'><Nav.Link><i className="fa-regular fa-heart fs-5 mt-3"></i></Nav.Link></LinkContainer>
 
-            <button type="button" className="btn btn-light position-relative mt-2 cartBtn" onClick={() => {
+            <button type="button" className="btn btn-light position-relative mt-3 mx-1 cartBtn" onClick={() => {
               console.log(user);
               if (!user) {
                 navigate("/authorization")
@@ -64,6 +64,7 @@ const Header = () => {
 
 
             }}>
+             
               <i className="fa-solid fa-cart-shopping"></i>
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                 {totalItems}
@@ -72,7 +73,7 @@ const Header = () => {
             </button>
 
 
-            <LinkContainer to="/product"><Nav.Link ><Button className='orderBtn ms-2'>{lang === 'en' ? 'ORDER ONLİNE' : 'ONLİNE SİFARİŞ'}</Button></Nav.Link></LinkContainer>
+            {/* <LinkContainer to="/product"><Nav.Link ><Button className='orderBtn ms-2'>{lang === 'en' ? 'ORDER ONLİNE' : 'ONLİNE SİFARİŞ'}</Button></Nav.Link></LinkContainer> */}
             <button className='modeBtn mt-3 ms-2' onClick={() => {
               mode === 'light' ? setMode('dark') : setMode('light')
               mode === 'light' ? localStorage.setItem('mode', 'dark') : localStorage.setItem('mode', 'light')
@@ -84,17 +85,17 @@ const Header = () => {
             }}>{lang === 'en' ? "AZ" : 'EN'}</button>
 
 
-            <button className='btn bg-light border-0 ms-2 adminBtn' onClick={() => {
+            <button className=' ms-2 mt-3 adminBtn ' onClick={() => {
               if (user == undefined) {
                 navigate('/authorization')
               } else if (user.user_status === "admin") {
                 navigate('/admin')
               }
             }}>
-              <i className="fa-regular fa-user fs-4"></i>
+              <i className="fa-regular fa-user "></i>
             </button>
 
-            <div className="user-info-box bg-light rounded-1 ms-2 px-2 py-1 d-flex align-items-center">
+            <div className="user-info-box bg-light rounded-1 ms-2 px-2 py-1 mt-3 d-flex align-items-center">
               <p className='text-dark fw-bold' style={{cursor: 'pointer'}} onClick={() => {
                 if (!user) {
                   navigate('/authorization')
@@ -110,12 +111,12 @@ const Header = () => {
               {
                 !user ? ""
                 :   (
-                  <p className='text-white bg-danger z-5 p-1 rounded-1 ' style={{cursor: 'pointer'}}  onClick={()=>{
+                  <p className='text-white bg-danger z-5 p-1 rounded-1 logout ' style={{cursor: 'pointer'}}  onClick={()=>{
                     localStorage.removeItem("user");
                     navigate('/')
                     // for refresing page
                     window.location.reload();
-                  }}>Log out</p>
+                  }}>{lang==='en' ? 'Log out' : 'Çıxış Et'}</p>
                 )
               }
               

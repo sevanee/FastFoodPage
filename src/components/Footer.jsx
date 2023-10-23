@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { LangContext } from '../../src/context/langContext';
+
 
 const Footer = () => {
+  const  [lang] = useContext(LangContext);
+
   return (
     <div>
         <div className="footer pt-5 ">
@@ -10,7 +14,7 @@ const Footer = () => {
             <img src="https://templates.envytheme.com/handout/default/assets/img/book-table.jpg" className="d-block mx-lg-auto img-fluid " alt="Bootstrap Themes" width={700} height={500} loading="lazy" />
           </div>
           <div className="col-lg-6">
-            <h3 className="fw-bold text-body-emphasis lh-1 mb-3">Book A Table Now!</h3>
+            <h3 className="fw-bold text-body-emphasis lh-1 mb-3"> {lang==='en' ? 'Book A Table Now!' : 'İndi Masa Rezervasiya edin!'}</h3>
             <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing eltsed do eiusmod tempor incididunt ut labore et dolore</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
             <a href="/" className="btn ">+123 775 (984) 753 <i className="fa-solid fa-caret-right"></i></a>
@@ -24,17 +28,17 @@ const Footer = () => {
           <div className="row">
             <div className="col-6 col-md-2 mb-3">
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">Sunday</a></li>
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">Monday</a></li>
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">Tuesday</a></li>
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">Wednesday</a></li>
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">Friday</a></li>
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">Saturday</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">{lang==='en' ? 'Sunday' : 'Bazar'}</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">{lang==='en' ? 'Monday' : 'Bazar Ertəsi'}</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">{lang==='en' ? 'Tuesday' : 'Çərşənbə Axşamı'}</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">{lang==='en' ? 'Wednesday' : 'Çərşənbə'}</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">{lang==='en' ? 'Friday' : 'Cümə'}</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light">{lang==='en' ? 'Saturday' : 'Şənbə'}</a></li>
               </ul>
             </div>
             <div className="col-6 col-md-2 mb-3">
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-warning">Closed</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-warning">{lang==='en' ? 'Closed' : 'Bağlıdır'}</a></li>
                 <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-warning">8.00 - 20.00</a></li>
                 <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-warning">10:00-5.00</a></li>
                 <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-warning">12:00-9:00</a></li>
@@ -44,7 +48,7 @@ const Footer = () => {
             </div>
             <div className="col-6 col-md-2 mb-3">
               <ul className="nav flex-column">
-                <h2 className='text-light'>Address</h2>
+                <h2 className='text-light'>{lang==='en' ? 'Address' : 'Ünvan'}</h2>
                 <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light"><i className="fa-solid fa-phone-volume text-warning"></i> +449 888 666 0000</a></li>
                 <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light"><i className="fa-regular fa-message text-warning"></i> hello@handout.com</a></li>
                 <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-light"><i className="fa-solid fa-location-crosshairs text-warning"></i> 855 Road, Brooklyn Street
@@ -58,17 +62,15 @@ New York 600</a></li>
   </div></li>
               </ul>
             </div>
-            {/* <div className="col-6 col-md-2 mb-3 googleMap"> 
-            <iframe className='location' src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d193746.99686960355!2d-74.11015048484853!3d40.645386881762036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zIDg1NSBSb2FkLCBCcm9va2x5biBTdHJlZXQgTmV3IFlvcmsgNjAwIEJpcmzJmcWfbWnFnyDFnnRhdGxhcsSx!5e0!3m2!1saz!2saz!4v1691988962203!5m2!1saz!2saz" width="400" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div> */}
+         
       
           </div>
         </footer>
       </div>
       <div className="d-flex flex-column flex-sm-row justify-content-between pt-4  end">
             <p className='ms-5 text-light fs-6'>Copyright @2023 Handout. All Rights Reserved by <span>EnvyTheme</span></p>
-            <p className='me-5 text-light'>Terms & Conditions   
-              <span>  |</span> Privacy Policy</p>
+            <p className='me-5 text-light'>{lang==='en' ? 'Terms & Conditions' : 'Şərtlər və Qaydalar'}   
+              <span>  |</span> {lang==='en' ? 'Privacy Policy' : 'Gizlilik Siyasəti'} </p>
           </div>
    </div>
     </div>

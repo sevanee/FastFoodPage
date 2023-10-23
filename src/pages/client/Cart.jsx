@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { LinkContainer } from 'react-router-bootstrap';
 import { useCart } from 'react-use-cart'
+import { LangContext } from '../../context/langContext';
 
 const Cart = () => {
   const { items , updateItemQuantity , cartTotal , removeItem} = useCart();
+  const  [lang] = useContext(LangContext);
   const [coupon,setCoupon]=useState(['']);
   const [appliedCoupon, setAppliedCoupon] = useState(null);
   const appplyCouponCode = (e) => {
@@ -21,17 +23,17 @@ const Cart = () => {
   };
   if(localStorage.getItem('user')){
     return (
-      <>
-        <div className="container cartPage">
+      <div className='cartPage'>
+        <div className="container ">
   
-          <table className="table cartTable">
+          <table className="table cartTable pt-5">
             <thead>
               <tr>
-                <th scope="col">PRODUCT</th>
-                <th scope="col">NAME</th>
-                <th scope="col">UNIT PRICE</th>
-                <th scope="col">QUANTITY</th>
-                <th scope="col">TOTAL</th>
+              <th scope="col">{lang==='en' ? 'PRODUCT' : 'MƏHSUL'}</th>
+              <th scope="col">{lang==='en' ? 'NAME' : 'AD'}</th>
+              <th scope="col">{lang==='en' ? 'UNIT PRICE' : 'VAHİD QİYMƏT'}</th>
+                <th scope="col">{lang==='en' ? 'QUANTITY' : 'MİQDAR'}</th>
+                <th scope="col">{lang==='en' ? 'TOTAL' : 'ÜMUMİ'}</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -67,8 +69,8 @@ const Cart = () => {
               <div className="col-lg-6 col-md-7 col-sm-6">
                 <form onSubmit={applyCoupon}>
                 <div >
-                  <input placeholder='Coupon code' type="text" className='coupon px-5 py-3 mt-2 border border-warning' value={coupon} onChange={appplyCouponCode}/>
-                  <button className='btn btn-warning text-light fw-bold rounded-0 py-3 px-3 mb-1 applyBtn' >APPLY COUPON</button>
+                  <input placeholder={lang==='en' ? 'Coupon code' : 'Kupon kodu'} type="text" className='coupon px-5 py-3 mt-2 border border-warning' value={coupon} onChange={appplyCouponCode}/>
+                  <button className='btn btn-warning text-light fw-bold rounded-0 py-3 px-3 mb-1 applyBtn' >{lang==='en' ? 'APPLY COUPON' : 'KUPON MÜRACİƏT EDİN'}</button>
                 </div>
                 </form>
                 
@@ -78,37 +80,37 @@ const Cart = () => {
   
           <div className="col-lg-12 totalCart">
             <div className="col-lg-5 col-md-3 cartTotals my-5">
-              <h3 className='fw-bold mb-4'>Cart Totals</h3>
+              <h3 className='fw-bold mb-4'>{lang==='en' ? 'Cart Totals' : 'Səbət Cəmi'}</h3>
               <table className='table border '>
                 <tbody>
                   <tr>
-                    <th >Total</th>
+                    <th >{lang==='en' ? 'Total' : 'Ümumi'}</th>
                     <td className='name'>${cartTotal}</td>
                   </tr>
                   <tr>
-                    <th>Shipping</th>
+                    <th>{lang==='en' ? 'Shipping' : 'Göndərmə'}</th>
                     <td className='name'>$30.00</td>
                   </tr>
                   <tr>
-                    <th>Discounted Total</th>
+                    <th>{lang==='en' ? 'Discounted Total' : 'Endirimli Cəm'}</th>
                     <td className='name'>${appliedCoupon}</td>
                   </tr>
                 </tbody>
               </table>
               <LinkContainer to='/checkout'>
-                <button className='btn btn-warning  fw-bold  py-3 px-5 rounded-5 updateBtn mt-2'>PROCEED TO CHECKOUT</button>
+                <button className='btn btn-warning  fw-bold  py-3 px-5 rounded-5 updateBtn mt-2'>{lang==='en' ? 'PROCEED TO CHECKOUT' : 'ÖDƏNİŞƏ DAVAM EDİN'}</button>
               </LinkContainer>
             </div>
           </div>
         </div>
   
-      </>
+      </div>
     )
 
   }else{
     return(
       <div className="container d-flex align-items-center justify-content-center">
-<LinkContainer to='/authorization'><h2 className='mt-5 py-5 btn  text-danger fs-1 fw-bold p-2'>Sign In</h2></LinkContainer>
+<LinkContainer to='/authorization'><h2 className='mt-5 py-5 btn  text-danger fs-1 fw-bold p-2'>{lang==='en' ? 'Sign In' : 'Daxil Ol'}</h2></LinkContainer>
       </div>
       
       

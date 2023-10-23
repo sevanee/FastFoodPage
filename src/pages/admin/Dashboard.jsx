@@ -1,28 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, Container, Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import { removeProduct } from '../../manager/actions/Action'
+import { LangContext } from '../../context/langContext';
 import { Link } from 'react-router-dom'
 import slugify from 'slugify'
 
 const Dashboard = () => {
   const productdata =useSelector(p=>p)
+  const  [lang] = useContext(LangContext);
   const dispatch =useDispatch()
   return (
-    <div>
-      <h1 className='text-center my-5'>Admin Panel</h1>
+    <div className='adminPanel'>
+      <h1 className='text-center py-5'>{lang==='en' ? 'Admin Panel' : 'İdarəetmə Paneli'}</h1>
       <Container>
-        <LinkContainer to="add"><Button className='mb-3 btn-warning fw-bold'>Add</Button></LinkContainer>
+        <LinkContainer to="add"><Button className='mb-3 btn-warning fw-bold'>{lang==='en' ? 'Add' : 'Əlavə Et'}</Button></LinkContainer>
       <Table striped bordered hover>
       <thead>
         <tr>
           <th>No</th>
-          <th>Image</th>
-          <th>Product</th>
-          <th>Description</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>{lang==='en' ? 'Image' : 'Şəkil'}</th>
+          <th>{lang==='en' ? 'Product' : 'Məhsul'}</th>
+          <th>{lang==='en' ? 'Description' : 'Təsvir'}</th>
+          <th>{lang==='en' ? 'Edit' : 'Düzəliş et'}</th>
+          <th>{lang==='en' ? 'Delete' : 'Sil'}</th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +35,7 @@ const Dashboard = () => {
             <td>{item.title}</td>
             <td>{item.desc}</td>
             <td><Link to={`edit/${slugify(item.title)}`}><Button>Edit</Button></Link></td>
-            <td><Button onClick={()=>{dispatch(removeProduct({id:item.id}))}}>Delete</Button></td>
+            <td><Button onClick={()=>{dispatch(removeProduct({id:item.id}))}}>{lang==='en' ? 'Delete' : 'Sil'}</Button></td>
           </tr>
         ))}
         
@@ -41,7 +43,7 @@ const Dashboard = () => {
     </Table>
 
     
-    <Link className='btn btn-danger my-3' to="/">Back to Home </Link>
+    <Link className='btn btn-danger my-3' to="/">{lang==='en' ? 'Back to Home' : 'Ana Səhifəyə Qayıt'} </Link>
       </Container>
     </div>
   )

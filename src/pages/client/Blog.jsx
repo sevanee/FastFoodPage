@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { LangContext } from '../../context/langContext';
+
 
 const Blog = () => {
+  const  [lang] = useContext(LangContext);
 
   return (
-    <>
+    <div className='commonBlog'>
         {/* Section 1 */}
 
 <div className="hero1">
@@ -13,7 +16,7 @@ const Blog = () => {
         <h1 className="display-5 fw-bold text-light mt-5">Blog</h1>
         <div className="col-lg-6 mx-auto d-flex justify-content-center">
           <div className="d-flex align-items-center lead mb-4">
-            <Link className='nav-link me-3' to="/">Home</Link> 
+            <Link className='nav-link me-3' to="/">{lang==='en' ? 'Home' : 'Ana Səhifə'}</Link> 
             <i className="fa-solid fa-mug-hot me-3"></i>
              <Link className='nav-link' to="/about">Blog</Link>
               </div>
@@ -26,8 +29,8 @@ const Blog = () => {
 {/* Section 2 */}
 
 <div className='container blogSection'>
-<h1 className='mt-5 whoAre ms-5 text-center'>News</h1>
-<h1 className="display-5 fw-bold  lh-1 mb-3 ms-5 title1 text-center mb-5">Read Burger News</h1>
+<h1 className='mt-5 whoAre ms-5 text-center'>{lang==='en' ? 'News' : 'Xəbərlər'}</h1>
+<h1 className="display-5 fw-bold  lh-1 mb-3 ms-5 title1 text-center mb-5">{lang==='en' ? 'Read Burger News' : 'Burger Xəbərlərini Oxu'}</h1>
 <div className="row">
     <div className="col-lg-4 col-md-6 mb-5">
     <div className="card border-0 rounded-0" style={{width: '18rem'}}>
@@ -43,7 +46,7 @@ const Blog = () => {
             </div>
         </div>
         <div className="card-body">
-          <h5 className="card-title fw-bold">Burgers Of Melbourne Is Helping</h5>
+          <h5 className="card-title fw-bold">{lang==='en' ? 'Burgers Of Melbourne Is Helping' : 'Melbourne Burgers Kömək Edir'}</h5>
           <p className="card-text text-secondary ">Lorem ipsum dolor sit amet consectetur adipiscingum suspendisse ultrices gravida.</p>
         </div>
       </div>
@@ -62,7 +65,7 @@ const Blog = () => {
             </div>
         </div>
         <div className="card-body">
-          <h5 className="card-title fw-bold">Savoir Faire Is Everywhere</h5>
+          <h5 className="card-title fw-bold">{lang==='en' ? 'Savoir Faire Is Everywhere' : 'Savoir Faire Hər Yerdədir'}</h5>
           <p className="card-text text-secondary ">Lorem ipsum dolor sit amet consectetur adipiscingum suspendisse ultrices gravida.</p>
         </div>
       </div>
@@ -81,7 +84,7 @@ const Blog = () => {
             </div>
         </div>
         <div className="card-body">
-          <h5 className="card-title fw-bold">Brie Burger Served With Curly</h5>
+          <h5 className="card-title fw-bold">{lang==='en' ? 'Brie Burger Served With Curly' : 'Brie Burger Qıvrımla Süfrəyə Verilir'}</h5>
           <p className="card-text text-secondary ">Lorem ipsum dolor sit amet consectetur adipiscingum suspendisse ultrices gravida.</p>
         </div>
       </div>
@@ -100,7 +103,7 @@ const Blog = () => {
             </div>
         </div>
         <div className="card-body">
-          <h5 className="card-title fw-bold">Toasty Buns Burgers</h5>
+          <h5 className="card-title fw-bold">{lang==='en' ? 'Toasty Buns Burgers' : 'Toast Buns Burgers'}</h5>
           <p className="card-text text-secondary ">Lorem ipsum dolor sit amet consectetur adipiscingum suspendisse ultrices gravida.</p>
         </div>
       </div>
@@ -146,7 +149,7 @@ const Blog = () => {
     
 </div>
 </div>
-    </>
+    </div>
   )
 }
 

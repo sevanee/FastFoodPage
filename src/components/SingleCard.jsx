@@ -9,7 +9,7 @@ const SingleCard = ({ alldata }) => {
   const { addWishlistItem ,getWishlistItem ,removeWishlistItem} = useWishlist();
 
   return (
-    <div className=' col-sm-12 col-md-3 singleCard'>
+    <div className=' col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 singleCard'>
         <div className=" card" style={{width: '16rem'}}>
             <LinkContainer to={`/product/${alldata.id}`}><img  src={alldata.image} className="card-img-top" alt="..." /></LinkContainer>
             <Button className='add-to-cart rounded-0' onClick={()=>addItem(alldata)}>ADD TO CART  <i className="fa-solid fa-cart-shopping"></i> </Button>
@@ -24,11 +24,11 @@ const SingleCard = ({ alldata }) => {
           <i className="fa-solid fa-star"></i>
           <i className="fa-solid fa-star"></i>
           </div>
-          <Button className='btn btn-light wishButton ' onClick={()=>{if(getWishlistItem(alldata.id)!==undefined){
+          <Button className='btn btn-warning wishButton ' onClick={()=>{if(getWishlistItem(alldata.id)!==undefined){
             removeWishlistItem(alldata.id);
           }else{
             addWishlistItem(alldata);
-          }}}><i className="fa-solid fa-heart text-danger"></i></Button>
+          }}}><i className="fa-solid fa-heart text-light"></i></Button>
          </div>
         </div>
       </div>

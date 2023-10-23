@@ -804,9 +804,6 @@
   border-color: #1d1d1d;
 }
 
-.shop1 {
-  margin-top: 130px;
-}
 .shop1 .lead {
   font-weight: bold;
 }
@@ -1165,6 +1162,10 @@ body {
   padding: 2px;
 }
 
+.light .adminBtn {
+  background-color: white !important;
+  color: black !important;
+}
 .light .orders {
   background-color: #f8f9fa !important;
 }
@@ -1213,6 +1214,101 @@ body {
   color: white !important;
 }
 
+.dark .wishlist {
+  background-color: #0e0e0e;
+}
+.dark .contactPage {
+  background-color: #000000;
+}
+.dark .contactPage .box1 {
+  background-color: #1d1d1d;
+}
+.dark .contactPage .contact2 {
+  background-color: #1d1d1d;
+}
+.dark .contactPage .contact2 h2 {
+  color: white;
+}
+.dark .contactPage .contact2 input {
+  background-color: #d2d2d2;
+  border: none;
+}
+.dark .contactPage .contact2 textarea {
+  background-color: #d2d2d2;
+  border: none;
+}
+.dark .commonBlog {
+  background-color: #000000;
+}
+.dark .commonBlog .blogSection .title1 {
+  color: white !important;
+}
+.dark .commonBlog .card {
+  background-color: #1d1d1d;
+}
+.dark .commonBlog .card .card-title {
+  color: white;
+}
+.dark .faq-contact h2 {
+  color: white;
+}
+.dark .faq {
+  background-color: #000000;
+}
+.dark .faq .frequent {
+  color: white;
+}
+.dark .check {
+  background-color: #1d1d1d;
+}
+.dark .check .title {
+  color: white !important;
+}
+.dark .check label {
+  color: white !important;
+}
+.dark .check hr {
+  color: white;
+}
+.dark .cartPage {
+  background-color: #000000;
+}
+.dark .editPage {
+  background-color: #0e0e0e;
+}
+.dark .editPage h1 {
+  color: white;
+}
+.dark .addPage {
+  background-color: #0e0e0e;
+}
+.dark .addPage h1 {
+  color: white;
+}
+.dark .adminPanel {
+  background-color: #0e0e0e;
+}
+.dark .adminPanel h1 {
+  color: white;
+}
+.dark .authorization {
+  background-color: #0e0e0e;
+}
+.dark .shopPage {
+  background-color: #000000;
+}
+.dark .singleCard p {
+  color: white !important;
+}
+.dark .singleCard .card-title {
+  color: white !important;
+}
+.dark .singleCard .card-body {
+  background-color: #1d1d1d;
+}
+.dark .user-info-box {
+  background-color: #fbb403 !important;
+}
 .dark .about5 {
   background-color: #1d1d1d;
 }
@@ -1391,13 +1487,6 @@ body {
   cursor: pointer;
 }
 
-.contactPage {
-  margin-top: 100px;
-}
-
-.cartPage {
-  margin-top: 100px;
-}
 .cartPage img {
   height: 50px !important;
 }
@@ -1462,11 +1551,6 @@ body {
   border-radius: 0;
 }
 
-.searchForm {
-  margin-top: 30px;
-  z-index: 99;
-}
-
 .orders {
   position: relative;
 }
@@ -1483,4 +1567,96 @@ body {
   width: 90%;
   height: 80%;
   z-index: 3;
+}
+
+.adminBtn {
+  border: none !important;
+  background-color: #1d1d1d;
+  border-radius: 20px;
+  width: 70px;
+  height: 35px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.user-info-box {
+  border: none !important;
+  border-radius: 30px;
+  width: 70px;
+  height: 35px;
+  font-weight: bold;
+}
+
+.custom-alert-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  transition: 1s;
+  transform: translateY(-100%);
+  z-index: 200;
+}
+.custom-alert-container .main-box {
+  width: 60%;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.custom-alert-container .main-box .img-box {
+  width: 10%;
+}
+.custom-alert-container .main-box .img-box img {
+  width: 100%;
+}
+.custom-alert-container .main-box .text-box {
+  width: 80%;
+}
+.custom-alert-container .main-box .text-box p {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .custom-alert-container .main-box p {
+    font-size: 13px;
+  }
+}
+.custom-alert-container .main-box #closeBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+@media (max-width: 768px) {
+  .custom-alert-container .main-box {
+    width: 90%;
+  }
+}
+
+.alert-active {
+  transform: translateY(10%);
+}
+
+.cartBtn {
+  width: 40px;
+  height: 30px;
+}
+
+.signup-area {
+  background-color: #f8f9fa;
+}
+.signup-area form {
+  background-color: white;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+}
+.signup-area form h3 {
+  color: #1d1d1d;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700 !important;
 }/*# sourceMappingURL=style.css.map */

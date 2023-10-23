@@ -16,7 +16,7 @@ const Home = () => {
   const [productdata] = useContext(ProductContext);
   const  [lang] = useContext(LangContext);
   return (
-    <div className='homePage mt-5'>
+    <div className='homePage '>
     {/* Section 1 */}
     <div id="carouselExample" className="carousel slide " >
         <div className="carousel-inner">
@@ -178,8 +178,8 @@ const Home = () => {
      {/* Section 4 */}
 
      <div className='homeSection4 pb-5'>
-        <h1 className=' py-5 quality'>Quality Products</h1>
-     <h1 className='mb-3 mt-2 delOne'>Burgers As Expected <br /> Dilicious One</h1>
+        <h1 className=' py-5 quality'>{lang==='en' ? 'Quality Products' : 'Keyfiyyətli Məhsullar'}</h1>
+     <h1 className='mb-3 mt-2 delOne'>{lang==='en' ? 'Burgers As Expected  Dilicious One' : 'Gözlənildiyi kimi Burgerlər Lezzətli'}</h1>
      <Container >
      <Swiper slidesPerView={4}
          breakpoints={{
@@ -237,11 +237,11 @@ const Home = () => {
 
      {/* Section 5 */}
 
-     <div className="orders col-12 mt-5 d-flex justify-content-center align-items-center">
+     <div className="orders col-12  d-flex justify-content-center align-items-center">
       
       <div className="backCircle ">
       <div className="video ">
-        <button className='btn video-btn bg-transparent' onClick={()=>setIframe(true)}><i class="fa-solid fa-play fs-2"></i></button>
+        <button className='btn video-btn bg-transparent' onClick={()=>setIframe(true)}><i className="fa-solid fa-play fs-2"></i></button>
 
           {
             iframe=== true ? <>
@@ -261,19 +261,19 @@ const Home = () => {
      <div className="pricess col-12 d-flex align-items-center justify-content-evenly ">
       <div className="cups d-flex flex-column align-items-center">
         <h1><CountUp  start={100} end={340} duration={1} />+</h1>
-        <p>Cups of Coffee</p>
+        <p>{lang==='en' ? 'Cups of Coffee' : 'Qəhvə Fincanları'}</p>
       </div>
       <div className="cups d-flex flex-column align-items-center">
         <h1><CountUp  start={1000} end={2678} duration={1} />+</h1>
-        <p>Orders Everyday</p>
+        <p>{lang==='en' ? 'Orders Everyday' : 'Hər Gün Sifarişlər'}</p>
       </div>
       <div className="cups d-flex flex-column align-items-center">
         <h1><CountUp  start={10} end={60} duration={1} /></h1>
-        <p>Skilled Professionals</p>
+        <p>{lang==='en' ? 'Skilled Professionals' : 'Bacarıqlı Peşəkarlar'}</p>
       </div>
       <div className="cups d-flex flex-column align-items-center">
         <h1><CountUp  start={60} end={130} duration={1} /></h1>
-        <p>Burgers at Hour</p>
+        <p>{lang==='en' ? 'Burgers at Hour' : 'Saatda Burger'}</p>
       </div>
      </div>
     
@@ -282,8 +282,8 @@ const Home = () => {
      {/* Section 8 */}
 
   <div className="section8">
-  <h1 className='pt-5 quality'>Photos</h1>
-     <h1 className='my-3 delOne'>Our Food Gallery</h1>
+  <h1 className='pt-5 quality'>{lang==='en' ? 'Photos' : 'Şəkillər'}</h1>
+     <h1 className='my-3 delOne'>{lang==='en' ? 'Our Food Gallery' : 'Yemək Qalereyamız'}</h1>
 
      <div className="container mb-5 ">
      <Swiper slidesPerView={4}
@@ -311,7 +311,7 @@ const Home = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image3.jpg" className="card-img-top" alt="..." />
         <div className="front d-flex flex-column justify-content-center align-items-center">
          <LinkContainer to='/product'><Button className='btn btn-warning text-light mb-2 '>Burger</Button></LinkContainer>
-         <h5>Burger Name</h5>
+         <h5>{lang==='en' ? 'Burger Name' : 'Burger Adı'}</h5>
         </div>
       </div>
       </SwiperSlide>
@@ -320,7 +320,7 @@ const Home = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image4.jpg" className="card-img-top" alt="..." />
         <div className="front d-flex flex-column justify-content-center align-items-center">
          <LinkContainer to='/product'><Button className='btn btn-warning text-light mb-2 '>Burger</Button></LinkContainer>
-         <h5>Burger Name</h5>
+          <h5>{lang==='en' ? 'Burger Name' : 'Burger Adı'}</h5>
         </div>
       </div>
       </SwiperSlide>
@@ -329,7 +329,7 @@ const Home = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image2.jpg" className="card-img-top" alt="..." />
         <div className="front d-flex flex-column justify-content-center align-items-center">
          <LinkContainer to='/product'><Button className='btn btn-warning text-light mb-2 '>Burger</Button></LinkContainer>
-         <h5>Burger Name</h5>
+          <h5>{lang==='en' ? 'Burger Name' : 'Burger Adı'}</h5>
         </div>
       </div>
       </SwiperSlide>
@@ -338,7 +338,7 @@ const Home = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image5.jpg" className="card-img-top" alt="..." />
         <div className="front d-flex flex-column justify-content-center align-items-center">
          <LinkContainer to='/product'><Button className='btn btn-warning text-light mb-2 '>Burger</Button></LinkContainer>
-         <h5>Burger Name</h5>
+          <h5>{lang==='en' ? 'Burger Name' : 'Burger Adı'}</h5>
         </div>
       </div>
       </SwiperSlide>
@@ -347,7 +347,7 @@ const Home = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image6.jpg" className="card-img-top" alt="..." />
         <div className="front d-flex flex-column justify-content-center align-items-center">
          <LinkContainer to='/product'><Button className='btn btn-warning text-light mb-2 '>Burger</Button></LinkContainer>
-         <h5>Burger Name</h5>
+          <h5>{lang==='en' ? 'Burger Name' : 'Burger Adı'}</h5>
         </div>
       </div>
       </SwiperSlide>
@@ -356,7 +356,7 @@ const Home = () => {
         <img src="https://templates.envytheme.com/handout/default/assets/img/gallery/image1.jpg" className="card-img-top" alt="..." />
         <div className="front d-flex flex-column justify-content-center align-items-center">
          <LinkContainer to='/product'><Button className='btn btn-warning text-light mb-2 '>Burger</Button></LinkContainer>
-         <h5>Burger Name</h5>
+          <h5>{lang==='en' ? 'Burger Name' : 'Burger Adı'}</h5>
         </div>
       </div>
       </SwiperSlide>
@@ -372,13 +372,13 @@ const Home = () => {
             <img  src="https://templates.envytheme.com/handout/default/assets/img/delivery.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width={650} height={450} loading="lazy" />
           </div>
           <div className="col-lg-6">
-          <p className="welcome mt-3 ">Delivery</p>
-            <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">What You Want To Select A Pick Up Through Online</h1>
+          <p className="welcome mt-3 ">{lang==='en' ? 'Delivery' : 'Çatdırılma'}</p>
+            <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">{lang==='en' ? 'What You Want To Select A Pick Up Through Online' : 'Onlayn Vasitəsilə Nəyi Seçmək İstəyirsiniz'}</h1>
             <p className="lead  mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
  <br /><br />
 Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultrices gravida.</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
-             <Link to='/product'> <button type="button" className="btn  btn-lg px-4 me-md-2 orderBtn">ORDER NOW <i className="fa-solid fa-caret-right"></i></button></Link>
+             <Link to='/product'> <button type="button" className="btn  btn-lg px-4 me-md-2 orderBtn">{lang==='en' ? 'ORDER NOW' : 'İNDİ SİFARİŞ EDİN'} <i className="fa-solid fa-caret-right"></i></button></Link>
               
             </div>
           </div>
@@ -392,7 +392,7 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
      <div className="container col-xxl-12 px-5 py-5  ">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
         <h1 className='pt-5 quality'>Testimonial</h1>
-     <h1 className='mt-3 delOne'>Our Clients Review</h1>
+     <h1 className='mt-3 delOne'>{lang==='en' ? 'Our Clients Review' : 'Müştərilərimizin Rəyi'}</h1>
           <div className="col-10 col-sm-8 col-lg-6 ">
             <img  src="https://templates.envytheme.com/handout/default/assets/img/feedback/image.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width={500} height={400} loading="lazy" />
           </div>
@@ -435,8 +435,8 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
               </div>
               <div className="card-body ">
               <p className="card-text">Pangolin Burger</p>
-               <a href="/product" className='nav-link'> <h1 className="card-title">Festive Special Burger</h1></a>
-                <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+               <a href="/product" className='nav-link'> <h1 className="card-title">{lang==='en' ? 'Festive Special Burger' : 'Bayram Xüsusi Burger'}</h1></a>
+                <a href="/product" className="btn ">{lang==='en' ? 'ORDER NOW' : 'İNDİ SİFARİŞ EDİN'} <i className="fa-solid fa-caret-right"></i></a>
               </div>
             </div>
           </div>
@@ -449,9 +449,9 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
               </div>
               </div>
               <div className="card-body ">
-              <p className="card-text">Flat 30% Off</p>
-               <a href="/product" className='nav-link'> <h1 className="card-title">Burger King Special</h1></a>
-                <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+              <p className="card-text">{lang==='en' ? 'Flat 30% Off' : 'Mənzil 30% Endirim'}</p>
+               <a href="/product" className='nav-link'> <h1 className="card-title">{lang==='en' ? 'Burger King Special' : 'Burger King Xüsusi'}</h1></a>
+                <a href="/product" className="btn ">{lang==='en' ? 'ORDER NOW' : 'İNDİ SİFARİŞ EDİN'}<i className="fa-solid fa-caret-right"></i></a>
               </div>
             </div>
           </div>
@@ -469,8 +469,8 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
             </div>
             <div className="card-body ">
             <p className="card-text">Pangolin Burger</p>
-             <a href="/product" className='nav-link'> <h1 className="card-title">Festive Burger</h1></a>
-              <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+             <a href="/product" className='nav-link'> <h1 className="card-title">{lang==='en' ? 'Festive Special Burger' : 'Bayram Xüsusi Burger'}</h1></a>
+              <a href="/product" className="btn ">{lang==='en' ? 'ORDER NOW' : 'İNDİ SİFARİŞ EDİN'} <i className="fa-solid fa-caret-right"></i></a>
             </div>
           </div>
         </div>
@@ -485,7 +485,7 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
             <div className="card-body ">
             <p className="card-text">CrazyBurger</p>
              <a href="/product" className='nav-link'> <h1 className="card-title">Jurik Burger</h1></a>
-              <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+              <a href="/product" className="btn ">{lang==='en' ? 'ORDER NOW' : 'İNDİ SİFARİŞ EDİN'}<i className="fa-solid fa-caret-right"></i></a>
             </div>
           </div>
         </div>
@@ -498,9 +498,9 @@ Eusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultr
             </div>
             </div>
             <div className="card-body ">
-            <p className="card-text">Summer 30% Off</p>
+            <p className="card-text">{lang==='en' ? 'Summer 30% Off' : 'Yay 30% Endirim'}</p>
              <a href="/product" className='nav-link'> <h1 className="card-title">Burger Vulso</h1></a>
-              <a href="/product" className="btn ">ORDER NOW <i className="fa-solid fa-caret-right"></i></a>
+              <a href="/product" className="btn ">{lang==='en' ? 'ORDER NOW' : 'İNDİ SİFARİŞ EDİN'} <i className="fa-solid fa-caret-right"></i></a>
             </div>
           </div>
         </div>

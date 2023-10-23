@@ -1,39 +1,42 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { LangContext } from '../../context/langContext';
 
 const Contact = () => {
+  const  [lang] = useContext(LangContext);
+
   return (
-    <>
-     <div className="container  contactPage">
+    <div className='contactPage pb-5'>
+     <div className="container  ">
 
 {/* Section 1 */}
 <div className="row align-items-center contact1 mb-5 ">
     <div className="col-lg-3 col-md-6 box1 ">
     <i className="fa-solid fa-earth-americas fs-1 text-danger"></i>
-    <p className='name fs-6 mt-3'>54 Hegmann Uninuo Apt. 890, New York, NY 10018, United States.</p>
+    <p className='name fs-6 mt-3'>{lang==='en' ? '54 Hegmann Uninuo Apt. 890, New York, NY 10018, United States.' : '54 Hegmann Uninuo Apt. 890, New York, NY 10018, Amerika Birləşmiş Ştatları.'}</p>
     </div>
     <div className="col-lg-4 col-md-6 dates box1  ">
         <ul>
-            <li className='name'>Sunday 
+            <li className='name'>{lang==='en' ? 'Sunday' : 'Bazar Günü'}
               
-                <span className='ms-5'>Closed</span>  <div className="lines"></div>
+                <span className='ms-5'>{lang==='en' ? 'Closed' : 'Bağlı'}</span>  <div className="lines"></div>
             </li>
-            <li className='name'>Monday 
+            <li className='name'>{lang==='en' ? 'Monday' : 'Bazar Ertəsi'} 
             
                 <span className='ms-5'>8.00-20.00</span><div className="lines"></div>
             </li>
-            <li className='name'>Tuesday 
+            <li className='name'>{lang==='en' ? 'Tuesday' : 'Çərşənbə Axşamı'} 
             
                 <span className='ms-5'>10.00-5.00</span><div className="lines"></div>
             </li>
-            <li className='name'>Wednesday 
+            <li className='name'>{lang==='en' ? 'Wednesday' : 'Çərşənbə'}  
             
                 <span className='ms-5'>12.00-9.00</span><div className="lines"></div>
             </li>
-            <li className='name'>Friday 
+            <li className='name'>{lang==='en' ? 'Friday' : 'Cümə'}   
             
                 <span className='ms-5'>3.00-1.00</span><div className="lines"></div>
             </li>
-            <li className='name'>Saturday 
+            <li className='name'>{lang==='en' ? 'Saturday' : 'Şənbə'}  
          
                 <span className='ms-5'>9.00-12.00</span>   <div className="lines"></div>
             </li>
@@ -48,8 +51,8 @@ const Contact = () => {
 
 {/* Section 2 */}
  <div className="contact2">
-    <p className='welcome text-warning fs-5'>Contuct Us</p>
-    <h2 className='fw-bold mb-4'>Contact With Us</h2>
+    <p className='welcome text-warning fs-5'>{lang==='en' ? 'Contuct Us' : 'Bizimlə Əlaqə Saxlayın'}</p>
+    <h2 className='fw-bold mb-4'>{lang==='en' ? 'Contact With Us' : 'Bizimlə Əlaqə Saxlayın'}</h2>
  <form id="contactForm" noValidate="true">
 <div className="row">
   <div className="col-lg-6 col-md-12">
@@ -84,7 +87,7 @@ const Contact = () => {
   </div>
   <div className="col-lg-12 col-md-12">
     <button type="submit" className="btn btn-danger px-4 py-2 rounded-5" >
-      SEND MESSAGE
+    {lang==='en' ? 'Contact With Us' : 'MESAJ GÖNDƏRİN'}
       <i className="fa-solid fa-caret-right ms-2"></i>
       <span />
     </button>
@@ -94,15 +97,12 @@ const Contact = () => {
 </div>
 </form>
  </div>
-{/* Section 3 */}
-{/* <div className="map">
-<iframe title='' className='rounded-3 my-5 col-lg-12' height={500} src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d193746.99686960355!2d-74.11015048484853!3d40.645386881762036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zIDg1NSBSb2FkLCBCcm9va2x5biBTdHJlZXQgTmV3IFlvcmsgNjAwIEJpcmzJmcWfbWnFnyDFnnRhdGxhcsSx!5e0!3m2!1saz!2saz!4v1691988962203!5m2!1saz!2saz"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div> */}
+
 
 
 </div>
 
-    </>
+    </div>
    
 
 
