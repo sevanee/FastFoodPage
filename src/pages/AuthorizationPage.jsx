@@ -78,6 +78,7 @@ const AuthorizationPage = () => {
       {customAlert()}
 
       <div id="alert-inner-div"></div>
+      
 
       <div className=" d-flex align-items-center justify-content-center py-5 authorization">
         <div className="col-lg-6 col-sm-4">

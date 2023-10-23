@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import slugify from "slugify";
 import { LangContext } from '../../../context/langContext';
-import { editProduct } from "../../../manager/actions/Action";
+import { editProduct, editProductsFromDatabase } from "../../../manager/actions/Action"
 
 const EditProduct = () => {
   const  [lang] = useContext(LangContext);
@@ -21,7 +21,7 @@ const EditProduct = () => {
         <Col md={4}>
           <ProductForm editProduct={productprop}
           sendValue={(items)=>{
-            dispatch(editProduct(productprop.id,items));
+            dispatch(editProductsFromDatabase(productprop.id,items));
             navigate('/admin')}} />
           <div className="back-home">
             <Link className="btn btn-danger mt-3" to="/">

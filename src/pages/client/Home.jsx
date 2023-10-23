@@ -29,7 +29,7 @@ const Home = () => {
           <div className="col-lg-6 txtBody " >
             <img width={600} height={120}  src="https://templates.envytheme.com/handout/default/assets/img/slider/burger.png" alt="" />
             <p className="lead mt-3 text-light"> {lang==='en' ? 'UPDATED MENU\'S ITEM' : 'YENILƏNMİŞ MENYU ELEMENTİ'}</p>
-            <h1 className='chicken'> {lang==='en' ? 'CHICKENSUP BURGER' : 'TOYUQ ƏTLİ BURGER'} <br /> </h1>
+            <h1 className='chicken title'> {lang==='en' ? 'CHICKENSUP BURGER' : 'TOYUQ ƏTLİ BURGER'} <br /> </h1>
             <p className="mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Integrated With Mushroom' : 'Göbələk İlə Birləşdirilmişdir'} </p>
             <p className=" mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Cheese Integrated' : 'Pendir İlə Birləşdirilmiş'} </p>
             <p className=" mt-3 text-light arrow"><i className="fa-solid fa-share text-warning me-2"></i>{lang==='en' ? 'Bacon Flavour' : 'Bekon Dadı'}</p>
@@ -106,7 +106,7 @@ const Home = () => {
 
       {/* Section 3 */}
 
-      {/* <div className='section3 col-12 d-flex  align-items-center  commonBox'>
+      <div className='section3 col-12 d-flex  align-items-center  commonBox'>
       <img className='background-img' src="https://templates.envytheme.com/handout/default/assets/img/others-bg.jpg" alt="" />
             <div className="cards-box">
             <div className='left d-flex  col-lg-5 col-sm-2'>
@@ -173,7 +173,7 @@ const Home = () => {
                 
             </div>
             </div>
-        </div> */}
+        </div>
         
      {/* Section 4 */}
 
