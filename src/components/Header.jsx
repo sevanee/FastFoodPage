@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Container, Nav, Navbar, Button } from 'react-bootstrap'
 import { ModeContext } from '../context/modeContext'
 import { LangContext } from '../context/langContext'
@@ -7,6 +7,15 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from 'react-use-cart'
 
 const Header = () => {
+  const [navbarClassScrolled, setNavbarClassScrolled] = useState("");
+
+  window.addEventListener("scroll", function () {
+    if (this.scrollY > 400) {
+      setNavbarClassScrolled("navbarFixed");
+    } else {
+      setNavbarClassScrolled("");
+    }
+  });
   const [mode, setMode] = useContext(ModeContext);
   const [lang, setLang] = useContext(LangContext);
   const { totalItems } = useCart();
@@ -26,21 +35,22 @@ const Header = () => {
   }
 
   return (
-    <Navbar expand="lg" className="bg-body-light navbar">
+    <header className={`${navbarClassScrolled}`}>
+ <Navbar expand="lg" className="bg-body-light navbar">
       <Container>
         <Navbar.Brand className='brand' href="/">Handout</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <LinkContainer to='/'><Nav.Link className='page'>{lang === 'en' ? 'Home' : 'Ana Səhifə'}</Nav.Link></LinkContainer>
+            <LinkContainer to='/'><Nav.Link className='page navbar-collapse collapse show'>{lang === 'en' ? 'Home' : 'Ana Səhifə'}</Nav.Link></LinkContainer>
             <LinkContainer to='/about'><Nav.Link className='page'>{lang === 'en' ? 'About' : 'Haqqımızda'}</Nav.Link></LinkContainer>
 
-            <li className="nav-item dropdown page shopDrop">
+            <li className="nav-item dropdown page shopDrop navbar-collapse collapse show">
               <a className="nav-link dropdown-toggle page" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {lang === 'en' ? 'Shop' : 'Mağaza'}
               </a>
 
-              <ul className="dropdown-menu dropdown1">
+              <ul className="dropdown-menu dropdown1 mt-5">
                 <LinkContainer to="/product"><li><a href='/product' className="dropdown-item" >{lang === 'en' ? 'Shop List' : 'Mağaza Siyahısı'}</a></li></LinkContainer>
 
                 <li><LinkContainer to="cart"><Link className="dropdown-item" >{lang === 'en' ? 'Cart' : 'Səbət'}</Link></LinkContainer></li>
@@ -48,13 +58,13 @@ const Header = () => {
                 <li><LinkContainer to='faq'><Link className="dropdown-item" >{lang === 'en' ? 'FAQ' : 'TVS'}</Link></LinkContainer></li>
               </ul>
             </li>
-            <LinkContainer to="/blog"><Nav.Link className='page'>{lang === 'en' ? 'Blog' : 'Bloq'}</Nav.Link></LinkContainer>
-            <LinkContainer to="/contact" ><Nav.Link className='page'>{lang === 'en' ? 'Contact' : 'Əlaqə'}</Nav.Link></LinkContainer>
+            <LinkContainer to="/blog"><Nav.Link className='page navbar-collapse collapse show' onClick={()=>{}}>{lang === 'en' ? 'Blog' : 'Bloq'}</Nav.Link></LinkContainer>
+            <LinkContainer to="/contact" ><Nav.Link className='page navbar-collapse collapse show'>{lang === 'en' ? 'Contact' : 'Əlaqə'}</Nav.Link></LinkContainer>
           </Nav>
           <Nav className="ms-auto">
-            <LinkContainer to='/wishlist'><Nav.Link><i className="fa-regular fa-heart fs-5 mt-3"></i></Nav.Link></LinkContainer>
+            <LinkContainer to='/wishlist'><Nav.Link className='navbar-collapse collapse show'><i className="fa-regular fa-heart fs-5 mt-3"></i></Nav.Link></LinkContainer>
 
-            <button type="button" className="btn btn-light position-relative mt-3 mx-1 cartBtn" onClick={() => {
+            <button type="button" className="btn btn-light position-relative mt-3 mx-1 cartBtn navbar-collapse collapse show" onClick={() => {
               console.log(user);
               if (!user) {
                 navigate("/authorization")
@@ -85,7 +95,7 @@ const Header = () => {
             }}>{lang === 'en' ? "AZ" : 'EN'}</button>
 
 
-            <button className=' ms-2 mt-3 adminBtn ' onClick={() => {
+            <button className=' ms-2 mt-3 adminBtn navbar-collapse collapse show' onClick={() => {
               if (user == undefined) {
                 navigate('/authorization')
               } else if (user.user_status === "admin") {
@@ -95,7 +105,7 @@ const Header = () => {
               <i className="fa-regular fa-user "></i>
             </button>
 
-            <div className="user-info-box bg-light rounded-1 ms-2 px-2 py-1 mt-3 d-flex align-items-center">
+            <div className="user-info-box bg-light rounded-1 ms-2 px-2 py-1 mt-3 d-flex align-items-center ">
               <p className='text-dark fw-bold' style={{cursor: 'pointer'}} onClick={() => {
                 if (!user) {
                   navigate('/authorization')
@@ -126,6 +136,8 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </header>
+   
   )
 }
 

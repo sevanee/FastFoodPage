@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { Button, Container, Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
+import { removeProduct } from '../../manager/actions/Action'
 import { LangContext } from '../../context/langContext';
 import { Link } from 'react-router-dom'
 import slugify from 'slugify'
-import {  removeProductsFromDatabase } from '../../manager/actions/Action';
 
 const Dashboard = () => {
   const productdata =useSelector(p=>p)
@@ -35,7 +35,7 @@ const Dashboard = () => {
             <td>{item.title}</td>
             <td>{item.desc}</td>
             <td><Link to={`edit/${slugify(item.title)}`}><Button>Edit</Button></Link></td>
-            <td><Button onClick={()=>{dispatch(removeProductsFromDatabase({id:item.id}))}}>{lang==='en' ? 'Delete' : 'Sil'}</Button></td>
+            <td><Button onClick={()=>{dispatch(removeProduct({id:item.id}))}}>{lang==='en' ? 'Delete' : 'Sil'}</Button></td>
           </tr>
         ))}
         

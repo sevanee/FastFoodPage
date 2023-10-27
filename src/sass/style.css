@@ -1787,4 +1787,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.navbarFixed {
+  transition: 2s;
+  width: 100%;
+  position: sticky !important;
+  top: -5vh;
+  transform: translateY(5vh);
+  background-color: red;
+  z-index: 200;
+}
+
+.signup-btn {
+  cursor: pointer;
+  color: #3f729b;
+}
+.signup-btn:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

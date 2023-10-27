@@ -3,8 +3,8 @@ import ProductForm from '../ProductForm'
 import { Col } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import {  useNavigate } from 'react-router-dom'
+import { addProduct } from '../../../manager/actions/Action'
 import { LangContext } from '../../../context/langContext';
-import {  addProductsToDatabase } from "../../../manager/actions/Action";
 
 
 const AddProduct = () => {
@@ -20,7 +20,7 @@ const AddProduct = () => {
 
        
         <ProductForm sendValue={(items)=>{
-          dispatch(addProductsToDatabase(items))
+          dispatch(addProduct(items))
           navigate('/admin')
         }}/>
         <div className="back-home">

@@ -1768,3 +1768,21 @@ body {
   align-items: center;
   justify-content: center;
 }
+.navbarFixed{
+  transition: 2s;
+  width: 100%;
+  position:sticky !important;
+  top: -5vh;
+  transform: translateY(5vh);
+  // padding: 100vh  0;
+  background-color: red;
+  z-index: 200;
+}
+
+.signup-btn{
+  cursor: pointer;
+  color: #3f729b;
+  &:hover{
+    text-decoration: underline;
+  }
+}
